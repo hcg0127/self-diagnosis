@@ -1,16 +1,12 @@
 package openai.example.demo.web.controller;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
-import openai.example.demo.web.dto.diagnosis.SelfDiagnosisRequest;
-import openai.example.demo.web.dto.diagnosis.SelfDiagnosisResponse;
+import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisRequest;
+import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisResponse;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -65,13 +59,14 @@ public class SelfDiagnosisController {
         chatbotRequest.addMessage("develop", developerPrompt);
         chatbotRequest.addMessage("user", "");
 
-        // OpenAI 답변 받아오기
+        // OpenAI response 받아오기
         ChatbotResponse chatbotResponse = restTemplate
                 .postForObject(openaiApiUrl, chatbotRequest, ChatbotResponse.class);
 
+        // response에서 JSON을 DTO로 변환
         SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
                 .builder()
-                .completionId(chatbotResponse.getCompletionId())
+                .id(chatbotResponse.getId())
                 .departmentList(new ArrayList<>())
                 .reason("")
                 .createdAt(LocalDateTime.now())

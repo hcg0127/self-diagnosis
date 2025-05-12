@@ -1,4 +1,4 @@
-package openai.example.demo.web.dto.diagnosis;
+package openai.example.demo.web.dto.selfDiagnosis;
 
 import lombok.*;
 
@@ -12,7 +12,7 @@ public class SelfDiagnosisResponse {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class CreateResultDTO {
-        String completionId;
+        String id; // completionId
         List<String> departmentList;
         String reason;
         LocalDateTime createdAt;

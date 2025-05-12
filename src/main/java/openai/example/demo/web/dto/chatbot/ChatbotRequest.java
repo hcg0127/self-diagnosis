@@ -9,7 +9,6 @@ import java.util.List;
 @Builder
 @Getter
 @AllArgsConstructor
-@NoArgsConstructor
 public class ChatbotRequest {
 
     private String model;
@@ -24,10 +23,8 @@ public class ChatbotRequest {
 
     private double presence_penalty;
 
-    public ChatbotRequest(String model, String prompt) {
-        this.model = model;
+    public ChatbotRequest() {
         this.messages = new ArrayList<>();
-        this.messages.add(new Message("user", prompt));
     }
 
     public void addMessage(String role, String content) {

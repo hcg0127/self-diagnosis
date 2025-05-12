@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 public class ChatbotResponse {
 
-    private String completionId;
+    private String id; // completionId
 
     private List<Choice> choices;
 

@@ -1,4 +1,4 @@
-package openai.example.demo.web.dto.diagnosis;
+package openai.example.demo.web.dto.selfDiagnosis;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
