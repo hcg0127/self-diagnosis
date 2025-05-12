@@ -1,21 +1,20 @@
-package openai.example.demo.web.dto;
+package openai.example.demo.web.dto.chatbot;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import openai.example.demo.domain.Message;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Builder
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChatbotRequest {
 
     private String model;
 
-    private List<Message> messages;
+    private List<Message> messages = new ArrayList<>();
 
     private double temperature;
 
@@ -29,5 +28,10 @@ public class ChatbotRequest {
         this.model = model;
         this.messages = new ArrayList<>();
         this.messages.add(new Message("user", prompt));
+    }
+
+    public void addMessage(String role, String content) {
+        Message message = new Message(role, content);
+        this.messages.add(message);
     }
 }

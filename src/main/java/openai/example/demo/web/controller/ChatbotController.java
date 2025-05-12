@@ -1,8 +1,8 @@
 package openai.example.demo.web.controller;
 
 import openai.example.demo.domain.Message;
-import openai.example.demo.web.dto.ChatbotRequest;
-import openai.example.demo.web.dto.ChatbotResponse;
+import openai.example.demo.web.dto.chatbot.ChatbotRequest;
+import openai.example.demo.web.dto.chatbot.ChatbotResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+// Chatbot 테스트용
 @RestController
 public class ChatbotController {
 
@@ -32,16 +33,18 @@ public class ChatbotController {
             return execution.execute(request, body);
         });
 
-        ChatbotRequest request = new ChatbotRequest(model, prompt);
-        request.getMessages().add(new Message("assistant", ""));
-        request.getMessages().add(new Message("system", ""));
-        request.setTemperature(0);
-        request.setMax_completion_tokens(256);
-        request.setFrequency_penalty(1.0);
-        request.setPresence_penalty(-0.5);
+        ChatbotRequest chatbotRequest = new ChatbotRequest();
+        chatbotRequest.addMessage("system", "");
+        chatbotRequest.addMessage("assistant", "");
+        chatbotRequest.addMessage("user", "");
+        chatbotRequest.builder()
+                        .temperature(0)
+                                .max_completion_tokens(256)
+                                        .frequency_penalty(1.0)
+                                                .presence_penalty(-0.5).build();
 
         ChatbotResponse response = restTemplate.postForObject(
-                openaiApiUrl, request, ChatbotResponse.class
+                openaiApiUrl, chatbotRequest, ChatbotResponse.class
         );
 
         return ResponseEntity.ok(response.getChoices().get(0).getMessage().getContent());

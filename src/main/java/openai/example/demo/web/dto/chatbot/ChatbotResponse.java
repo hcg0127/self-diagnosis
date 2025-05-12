@@ -1,16 +1,17 @@
-package openai.example.demo.web.dto;
+package openai.example.demo.web.dto.chatbot;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import openai.example.demo.domain.Message;
 
 import java.util.List;
 
-@Data
+@Builder
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChatbotResponse {
+
+    private String completionId;
 
     private List<Choice> choices;
 
