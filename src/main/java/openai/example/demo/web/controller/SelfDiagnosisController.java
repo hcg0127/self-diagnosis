@@ -19,6 +19,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -36,17 +40,8 @@ public class SelfDiagnosisController {
     @Value("${openai.api-key}")
     private String openaiApiKey;
 
-    private String developerPrompt;
-
-    @PostConstruct
-    public void init() throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        InputStream input = new ClassPathResource("static/self-diagnosis/developer-prompt.txt").getInputStream();
-        developerPrompt = mapper.readValue(input, new TypeReference<>() {});
-    }
-
     @PostMapping("/chatbot")
-    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid SelfDiagnosisRequest.CreateDTO req) {
+    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid SelfDiagnosisRequest.CreateDTO req) throws IOException {
 
         // RestTemplate = 외부로 HTTP 전송
         RestTemplate restTemplate = new RestTemplate();
@@ -64,6 +59,9 @@ public class SelfDiagnosisController {
                 .frequency_penalty(1.0)
                 .presence_penalty(-0.5)
                 .build();
+
+        // request에 message 추가
+        String developerPrompt = Files.readString(Paths.get("developer-prompt.txt"), StandardCharsets.UTF_8);
         chatbotRequest.addMessage("develop", developerPrompt);
         chatbotRequest.addMessage("user", "");
 
