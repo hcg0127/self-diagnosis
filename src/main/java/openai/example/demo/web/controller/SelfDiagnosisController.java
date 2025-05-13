@@ -15,6 +15,7 @@ import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -43,7 +44,7 @@ public class SelfDiagnosisController {
     private String openaiApiKey;
 
     @PostMapping("/chat")
-    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
+    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
 
         // RestTemplate = 외부 URL로 HTTP 전송
         RestTemplate restTemplate = new RestTemplate();
@@ -70,11 +71,17 @@ public class SelfDiagnosisController {
         // request에 develop message 추가
         // develop message = 모델에게 정확한 지시 내리기
         String developerPrompt = Files.readString(Paths.get("src/main/resources/static/self-diagnosis/developer-prompt.txt"), StandardCharsets.UTF_8);
-        chatbotRequest.addMessage("develop", developerPrompt);
+        chatbotRequest.addMessage("developer", developerPrompt);
 
         // request에 user message 추가
         // user message = 사용자의 요청
-        String userPrompt = "Please recommend a medical department that suits my symptoms.";
+        String userPrompt = "Please recommend a medical department that suits my symptoms.\n"
+                + " - body system: " + req.getSystem() + "\n"
+                + " - symptom: " + req.getSymptom() + "\n";
+        if (req.getCondition() != null)
+            userPrompt += " - condition: " + req.getCondition() + "\n";
+        if (req.getAdditionalNote() != null)
+            userPrompt += " - additional note: " + req.getAdditionalNote();
         chatbotRequest.addMessage("user", userPrompt);
 
         // OpenAI response를 객체로 변환해서 가져오기

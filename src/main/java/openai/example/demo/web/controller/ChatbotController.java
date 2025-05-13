@@ -18,6 +18,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +61,8 @@ public class ChatbotController {
                 .response_format(rootNode)
                 .build();
         chatbotRequest.addMessage("user", prompt);
+        String developerPrompt = Files.readString(Paths.get("src/main/resources/static/self-diagnosis/developer-prompt.txt"), StandardCharsets.UTF_8);
+        chatbotRequest.addMessage("developer", developerPrompt);
 
         ChatbotResponse chatbotResponse = restTemplate.postForObject(
                 openaiApiUrl, chatbotRequest, ChatbotResponse.class

@@ -23,7 +23,7 @@ public class SelfDiagnosisResponse {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class Department {
-        String ko;
         String en;
+        String ko;
     }
 }

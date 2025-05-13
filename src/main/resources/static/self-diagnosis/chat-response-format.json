@@ -22,13 +22,11 @@
             },
             "required": ["ko", "en"],
             "additionalProperties": false
-          },
-          "minItems": 1,
-          "maxItems": 3
+          }
         },
         "reason": {
           "type": "string",
-          "description": "진료과를 추천한 이유 설명 (30자 이내로 요약)"
+          "description": "진료과를 추천한 이유 설명"
         }
       },
       "required": ["medical_departments", "reason"],
