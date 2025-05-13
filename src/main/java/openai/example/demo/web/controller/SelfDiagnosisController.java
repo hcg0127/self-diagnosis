@@ -52,7 +52,7 @@ public class SelfDiagnosisController {
         });
 
         // OpenAI API URL로 보낼 request 작성
-        JsonNode rootNode = mapper.readTree(new File("chat-response-format.json"));
+        JsonNode rootNode = mapper.readTree(new File("src/main/resources/static/self-diagnosis/chat-response-format.json"));
 
         ChatbotRequest chatbotRequest = new ChatbotRequest().builder()
                 .model(model)

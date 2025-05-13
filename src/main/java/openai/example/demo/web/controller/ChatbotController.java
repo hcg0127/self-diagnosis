@@ -32,7 +32,7 @@ public class ChatbotController {
     private String openaiApiKey;
 
     @PostMapping("/chatbot")
-    public ResponseEntity<String> chat(@RequestParam("prompt") String prompt) throws IOException {
+    public ResponseEntity<ChatbotResponse> chat(@RequestParam("prompt") String prompt) throws IOException {
 
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getInterceptors().add((request, body, execution) -> {
@@ -43,7 +43,7 @@ public class ChatbotController {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        JsonNode rootNode = mapper.readTree(new File("chat-response-format.json"));
+        JsonNode rootNode = mapper.readTree(new File("src/main/resources/static/self-diagnosis/chat-response-format.json"));
         ChatbotRequest chatbotRequest = new ChatbotRequest().builder()
                 .model(model)
                 .messages(new ArrayList<>())
@@ -73,6 +73,6 @@ public class ChatbotController {
 //                .createdAt(LocalDateTime.now())
 //                .build();
 
-        return ResponseEntity.ok(choiceContent);
+        return ResponseEntity.ok(chatbotResponse);
     }
 }
