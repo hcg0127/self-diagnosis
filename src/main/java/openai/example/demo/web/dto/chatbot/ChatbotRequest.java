@@ -9,11 +9,12 @@ import java.util.List;
 @Builder
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class ChatbotRequest {
 
     private String model;
 
-    private List<Message> messages = new ArrayList<>();
+    private List<Message> messages;
 
     private double temperature;
 
@@ -23,9 +24,7 @@ public class ChatbotRequest {
 
     private double presence_penalty;
 
-    public ChatbotRequest() {
-        this.messages = new ArrayList<>();
-    }
+    private Object response_format;
 
     public void addMessage(String role, String content) {
         Message message = new Message(role, content);

@@ -1,0 +1,38 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "symptom_to_department_response",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "medical_departments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ko": {
+                "type": "string",
+                "description": "진료과의 한글 이름"
+              },
+              "en": {
+                "type": "string",
+                "description": "진료과의 영어 이름"
+              }
+            },
+            "required": ["ko", "en"],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "reason": {
+          "type": "string",
+          "description": "진료과를 추천한 이유 설명"
+        }
+      },
+      "required": ["medical_departments", "reason"],
+      "additionalProperties": false
+    }
+  }
+}
