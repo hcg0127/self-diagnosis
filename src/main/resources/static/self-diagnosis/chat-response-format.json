@@ -22,7 +22,9 @@
             },
             "required": ["ko", "en"],
             "additionalProperties": false
-          }
+          },
+          "minItems": 1,
+          "maxItems": 3
         },
         "reason": {
           "type": "string",

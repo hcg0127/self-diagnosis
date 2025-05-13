@@ -88,7 +88,7 @@ public class SelfDiagnosisController {
         JSONParser parser = new JSONParser();
         JSONObject content = (JSONObject) parser.parse(choiceContent);
 
-        // content에서 medical_departments(JSONArray) 추출
+        // content에서 medical_departments(JSONArray) 추출 및 List로 변환
         JSONArray medical_departments = (JSONArray) content.get("medical_departments");
         List<SelfDiagnosisResponse.Department> departmentList = new ArrayList<>();
         for (int i = 0; i < medical_departments.size(); i++) {
@@ -99,7 +99,7 @@ public class SelfDiagnosisController {
             departmentList.add(department);
         }
 
-        // content에서 reason(String) 추출
+        // content에서 reason(Object) 추출 및 String으로 변환
         String reasonText = content.get("reason").toString();
 
         // DTO로 변환
