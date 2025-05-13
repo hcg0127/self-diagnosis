@@ -22,17 +22,8 @@ public class SelfDiagnosisResponse {
     @Builder
     @AllArgsConstructor
     @NoArgsConstructor
-    private static class Department {
+    public static class Department {
         String ko;
         String en;
-    }
-
-    @Getter
-    @Builder
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public static class ChoiceContent {
-        List<Department> departmentList;
-        String reason;
     }
 }

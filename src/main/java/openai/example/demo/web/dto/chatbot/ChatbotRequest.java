@@ -3,7 +3,6 @@ package openai.example.demo.web.dto.chatbot;
 import lombok.*;
 import openai.example.demo.domain.Message;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Builder

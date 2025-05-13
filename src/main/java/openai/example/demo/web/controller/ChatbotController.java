@@ -2,10 +2,13 @@ package openai.example.demo.web.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import openai.example.demo.domain.Message;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
 import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisResponse;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 // Chatbot 테스트용
 @RestController
@@ -32,7 +36,7 @@ public class ChatbotController {
     private String openaiApiKey;
 
     @PostMapping("/chatbot")
-    public ResponseEntity<ChatbotResponse> chat(@RequestParam("prompt") String prompt) throws IOException {
+    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@RequestParam("prompt") String prompt) throws IOException, ParseException {
 
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getInterceptors().add((request, body, execution) -> {
@@ -60,19 +64,28 @@ public class ChatbotController {
         );
 
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
-
-        // OpenAI response를 DTO로 변환하기 위한 객체 생성
-//        SelfDiagnosisResponse.ChoiceContent toResponse = mapper.readValue(choiceContent, SelfDiagnosisResponse.ChoiceContent.class);
+        JSONParser parser = new JSONParser();
+        JSONObject content = (JSONObject) parser.parse(choiceContent);
+        JSONArray medical_departments = (JSONArray) content.get("medical_departments");
+        List<SelfDiagnosisResponse.Department> departmentList = new ArrayList<>();
+        for (int i = 0; i < medical_departments.size(); i++) {
+            JSONObject medical_department = (JSONObject) medical_departments.get(i);
+            String en = medical_department.get("en").toString();
+            String ko = medical_department.get("ko").toString();
+            SelfDiagnosisResponse.Department department = new SelfDiagnosisResponse.Department(en,ko);
+            departmentList.add(department);
+        }
+        String reasonText = content.get("reason").toString();
 
         // response에서 JSON을 DTO로 변환
-//        SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
-//                .builder()
-//                .id(chatbotResponse.getId())
-//                .departmentList(toResponse.getDepartmentList())
-//                .reason(toResponse.getReason())
-//                .createdAt(LocalDateTime.now())
-//                .build();
+        SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
+                .builder()
+                .id(chatbotResponse.getId())
+                .departmentList(departmentList)
+                .reason(reasonText)
+                .createdAt(LocalDateTime.now())
+                .build();
 
-        return ResponseEntity.ok(chatbotResponse);
+        return ResponseEntity.ok(response);
     }
 }

@@ -8,7 +8,10 @@ import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
 import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisRequest;
 import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisResponse;
-import org.apache.tomcat.util.json.JSONParser;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +26,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController()
 @RequestMapping("/self-diagnosis")
@@ -39,11 +43,9 @@ public class SelfDiagnosisController {
     private String openaiApiKey;
 
     @PostMapping("/chat")
-    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid SelfDiagnosisRequest.CreateDTO req) throws IOException {
+    public ResponseEntity<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        // RestTemplate = 외부로 HTTP 전송
+        // RestTemplate = 외부 URL로 HTTP 전송
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getInterceptors().add((request, body, execution) -> {
             request.getHeaders().add("Authorization", "Bearer " + openaiApiKey);
@@ -52,10 +54,12 @@ public class SelfDiagnosisController {
         });
 
         // OpenAI API URL로 보낼 request 작성
+        // request에 넣을 response_format 불러오기
+        ObjectMapper mapper = new ObjectMapper();
         JsonNode rootNode = mapper.readTree(new File("src/main/resources/static/self-diagnosis/chat-response-format.json"));
-
         ChatbotRequest chatbotRequest = new ChatbotRequest().builder()
                 .model(model)
+                .messages(new ArrayList<>())
                 .temperature(0)
                 .max_completion_tokens(256)
                 .frequency_penalty(1.0)
@@ -64,27 +68,46 @@ public class SelfDiagnosisController {
                 .build();
 
         // request에 develop message 추가
+        // develop message = 모델에게 정확한 지시 내리기
         String developerPrompt = Files.readString(Paths.get("src/main/resources/static/self-diagnosis/developer-prompt.txt"), StandardCharsets.UTF_8);
         chatbotRequest.addMessage("develop", developerPrompt);
 
         // request에 user message 추가
+        // user message = 사용자의 요청
         String userPrompt = "Please recommend a medical department that suits my symptoms.";
         chatbotRequest.addMessage("user", userPrompt);
 
-        // OpenAI response 받아오기
+        // OpenAI response를 객체로 변환해서 가져오기
         ChatbotResponse chatbotResponse = restTemplate
                 .postForObject(openaiApiUrl, chatbotRequest, ChatbotResponse.class);
+
+        // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
 
-        // OpenAI response를 DTO로 변환하기 위한 객체 생성
-        SelfDiagnosisResponse.ChoiceContent toResponse = mapper.readValue(choiceContent, SelfDiagnosisResponse.ChoiceContent.class);
+        // content 파싱
+        JSONParser parser = new JSONParser();
+        JSONObject content = (JSONObject) parser.parse(choiceContent);
 
-        // response에서 JSON을 DTO로 변환
+        // content에서 medical_departments(JSONArray) 추출
+        JSONArray medical_departments = (JSONArray) content.get("medical_departments");
+        List<SelfDiagnosisResponse.Department> departmentList = new ArrayList<>();
+        for (int i = 0; i < medical_departments.size(); i++) {
+            JSONObject medical_department = (JSONObject) medical_departments.get(i);
+            String en = medical_department.get("en").toString();
+            String ko = medical_department.get("ko").toString();
+            SelfDiagnosisResponse.Department department = new SelfDiagnosisResponse.Department(en,ko);
+            departmentList.add(department);
+        }
+
+        // content에서 reason(String) 추출
+        String reasonText = content.get("reason").toString();
+
+        // DTO로 변환
         SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
                 .builder()
                 .id(chatbotResponse.getId())
-                .departmentList(toResponse.getDepartmentList())
-                .reason(toResponse.getReason())
+                .departmentList(departmentList)
+                .reason(reasonText)
                 .createdAt(LocalDateTime.now())
                 .build();
 
