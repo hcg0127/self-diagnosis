@@ -16,7 +16,8 @@ public enum ErrorStatus implements BaseErrorCode {
     _UNAUTHORIZED(HttpStatus.UNAUTHORIZED,"COMMON401","인증이 필요합니다."),
     _FORBIDDEN(HttpStatus.FORBIDDEN, "COMMON403", "금지된 요청입니다."),
 
-    //예시
+    //parse
+    JSON_FORMAT_UNMATCHED(HttpStatus.NOT_FOUND, "JSON4001", "JSON 형식이 올바르지 않습니다."),
     NO_MEMBER_EXIST(HttpStatus.NOT_FOUND, "MEMBER4005", "존재하지 않는 회원입니다.");
 
     private final HttpStatus httpStatus;
