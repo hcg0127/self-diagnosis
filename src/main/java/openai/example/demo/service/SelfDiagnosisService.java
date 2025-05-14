@@ -1,6 +1,8 @@
 package openai.example.demo.service;
 
 import lombok.RequiredArgsConstructor;
+import openai.example.demo.apiPayload.code.status.ErrorStatus;
+import openai.example.demo.apiPayload.exception.handler.JsonParserHanlder;
 import openai.example.demo.converter.SelfDiagnosisConverter;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
@@ -32,26 +34,31 @@ public class SelfDiagnosisService {
 
         // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
+        boolean isMatched = (choiceContent.charAt(0) == '{' && choiceContent.charAt(choiceContent.length() - 1) == '}');
 
-        // content를 JSON으로 파싱
-        JSONParser parser = new JSONParser();
-        JSONObject content = (JSONObject) parser.parse(choiceContent);
+        if (isMatched) {
+            // content를 JSON으로 파싱
+            JSONParser parser = new JSONParser();
+            JSONObject content = (JSONObject) parser.parse(choiceContent);
 
-        // content에서 medical_departments(JSONArray) 추출 및 List로 변환
-        JSONArray medical_departments = (JSONArray) content.get("medical_departments");
-        List<SelfDiagnosisResponse.Department> departmentList = new ArrayList<>();
-        for (int i = 0; i < medical_departments.size(); i++) {
-            JSONObject medical_department = (JSONObject) medical_departments.get(i);
-            String en = medical_department.get("en").toString();
-            String ko = medical_department.get("ko").toString();
-            SelfDiagnosisResponse.Department department = new SelfDiagnosisResponse.Department(en,ko);
-            departmentList.add(department);
-        }
+            // content에서 medical_departments(JSONArray) 추출 및 List로 변환
+            JSONArray medical_departments = (JSONArray) content.get("medical_departments");
+            List<SelfDiagnosisResponse.Department> departmentList = new ArrayList<>();
+            for (int i = 0; i < medical_departments.size(); i++) {
+                JSONObject medical_department = (JSONObject) medical_departments.get(i);
+                String en = medical_department.get("en").toString();
+                String ko = medical_department.get("ko").toString();
+                SelfDiagnosisResponse.Department department = new SelfDiagnosisResponse.Department(en,ko);
+                departmentList.add(department);
+            }
 
-        // content에서 reason(Object) 추출 및 String으로 변환
-        JSONObject reason = (JSONObject) content.get("reason");
-        SelfDiagnosisResponse.Reason reasonObject = new SelfDiagnosisResponse.Reason(reason.get("en").toString(), reason.get("ko").toString());
+            // content에서 reason(Object) 추출 및 String으로 변환
+            JSONObject reason = (JSONObject) content.get("reason");
+            SelfDiagnosisResponse.Reason reasonObject = new SelfDiagnosisResponse.Reason(reason.get("en").toString(), reason.get("ko").toString());
 
-        return SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonObject);
+            return SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonObject);
+        } else
+            throw new JsonParserHanlder(ErrorStatus.JSON_FORMAT_UNMATCHED);
+
     }
 }
