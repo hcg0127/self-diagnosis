@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import openai.example.demo.converter.ChatbotConverter;
 import openai.example.demo.converter.SelfDiagnosisConverter;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
@@ -59,15 +60,7 @@ public class SelfDiagnosisController {
         // request에 넣을 response_format 불러오기
         ObjectMapper mapper = new ObjectMapper();
         JsonNode rootNode = mapper.readTree(new File("src/main/resources/static/self-diagnosis/chat-response-format.json"));
-        ChatbotRequest chatbotRequest = new ChatbotRequest().builder()
-                .model(model)
-                .messages(new ArrayList<>())
-                .temperature(0)
-                .max_completion_tokens(256)
-                .frequency_penalty(1.0)
-                .presence_penalty(-0.5)
-                .response_format(rootNode)
-                .build();
+        ChatbotRequest chatbotRequest = ChatbotConverter.toChatbotRequest(model, 0, 256, 1.0, -0.5, rootNode);
 
         // request에 develop message 추가
         // develop message = 모델에게 정확한 지시 내리기
@@ -92,7 +85,7 @@ public class SelfDiagnosisController {
         // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
 
-        // content 파싱
+        // content를 JSON으로 파싱
         JSONParser parser = new JSONParser();
         JSONObject content = (JSONObject) parser.parse(choiceContent);
 
