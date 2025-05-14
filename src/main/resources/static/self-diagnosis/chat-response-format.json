@@ -25,8 +25,19 @@
           }
         },
         "reason": {
-          "type": "string",
-          "description": "진료과를 추천한 이유 설명"
+          "type": "object",
+          "properties": {
+            "ko": {
+              "type": "string",
+              "description": "진료과 추천 이유 (한글)"
+            },
+            "en": {
+              "type": "string",
+              "description": "진료과 추천 이유 (영어)"
+            }
+          },
+          "required": ["ko", "en"],
+          "additionalProperties": false
         }
       },
       "required": ["medical_departments", "reason"],

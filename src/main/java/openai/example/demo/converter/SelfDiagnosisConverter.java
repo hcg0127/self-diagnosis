@@ -9,7 +9,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SelfDiagnosisConverter {
 
-    public static SelfDiagnosisResponse.CreateResultDTO createResultDTO(String id, List<SelfDiagnosisResponse.Department> departmentList, String reason) {
+    public static SelfDiagnosisResponse.CreateResultDTO createResultDTO(String id, List<SelfDiagnosisResponse.Department> departmentList, SelfDiagnosisResponse.Reason reason) {
         return SelfDiagnosisResponse.CreateResultDTO.builder()
                 .id(id)
                 .departmentList(departmentList)

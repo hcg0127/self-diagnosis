@@ -49,8 +49,9 @@ public class SelfDiagnosisService {
         }
 
         // content에서 reason(Object) 추출 및 String으로 변환
-        String reasonText = content.get("reason").toString();
+        JSONObject reason = (JSONObject) content.get("reason");
+        SelfDiagnosisResponse.Reason reasonObject = new SelfDiagnosisResponse.Reason(reason.get("en").toString(), reason.get("ko").toString());
 
-        return SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonText);
+        return SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonObject);
     }
 }

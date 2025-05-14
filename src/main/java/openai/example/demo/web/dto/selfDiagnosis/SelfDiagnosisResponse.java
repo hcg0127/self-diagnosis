@@ -14,7 +14,7 @@ public class SelfDiagnosisResponse {
     public static class CreateResultDTO {
         String id; // completionId
         List<Department> departmentList;
-        String reason;
+        Reason reason;
         LocalDateTime createdAt;
     }
 
@@ -23,6 +23,15 @@ public class SelfDiagnosisResponse {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class Department {
+        String en;
+        String ko;
+    }
+
+    @Getter
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Reason {
         String en;
         String ko;
     }

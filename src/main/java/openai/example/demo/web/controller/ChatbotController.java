@@ -80,14 +80,15 @@ public class ChatbotController {
             SelfDiagnosisResponse.Department department = new SelfDiagnosisResponse.Department(en,ko);
             departmentList.add(department);
         }
-        String reasonText = content.get("reason").toString();
+        JSONObject reason = (JSONObject) content.get("reason");
+        SelfDiagnosisResponse.Reason reasonObject = new SelfDiagnosisResponse.Reason(reason.get("en").toString(), reason.get("ko").toString());
 
         // response에서 JSON을 DTO로 변환
         SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
                 .builder()
                 .id(chatbotResponse.getId())
                 .departmentList(departmentList)
-                .reason(reasonText)
+                .reason(reasonObject)
                 .createdAt(LocalDateTime.now())
                 .build();
 
