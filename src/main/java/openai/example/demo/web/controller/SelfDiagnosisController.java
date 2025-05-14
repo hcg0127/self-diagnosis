@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import openai.example.demo.converter.SelfDiagnosisConverter;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
 import openai.example.demo.web.dto.selfDiagnosis.SelfDiagnosisRequest;
@@ -110,13 +111,7 @@ public class SelfDiagnosisController {
         String reasonText = content.get("reason").toString();
 
         // DTO로 변환
-        SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisResponse.CreateResultDTO
-                .builder()
-                .id(chatbotResponse.getId())
-                .departmentList(departmentList)
-                .reason(reasonText)
-                .createdAt(LocalDateTime.now())
-                .build();
+        SelfDiagnosisResponse.CreateResultDTO response = SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonText);
 
         return ResponseEntity.ok(response);
     }
