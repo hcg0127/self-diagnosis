@@ -37,7 +37,7 @@ public class SelfDiagnosisService {
 
         // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
-        boolean isMatched = (choiceContent.charAt(0) == '{' && choiceContent.charAt(choiceContent.length() - 1) == '}');
+        boolean isMatched = (choiceContent.charAt(0) == '{' && choiceContent.charAt(choiceContent.length() - 1) == '}' && choiceContent.charAt(choiceContent.length() - 2) == '}');
 
         if (isMatched) {
             // content를 JSON으로 파싱
