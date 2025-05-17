@@ -1,5 +1,7 @@
 package openai.example.demo.service;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import openai.example.demo.apiPayload.code.status.ErrorStatus;
 import openai.example.demo.apiPayload.exception.handler.JsonParserHanlder;
@@ -15,6 +17,7 @@ import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,5 +63,16 @@ public class SelfDiagnosisService {
         } else
             throw new JsonParserHanlder(ErrorStatus.JSON_FORMAT_UNMATCHED);
 
+    }
+
+    public SelfDiagnosisResponse.SymptomQuestionResultDTO createSymptomQuestion(String symptom) throws IOException {
+
+        String url = "src/main/resources/static/symptom-question/" + symptom + ".json";
+
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode rootNode = mapper.readTree(new File(url));
+        SelfDiagnosisResponse.SymptomQuestionResultDTO result = mapper.treeToValue(rootNode, SelfDiagnosisResponse.SymptomQuestionResultDTO.class);
+
+        return SelfDiagnosisConverter.createSymptomQuestionResultDTO(symptom, result.getQuestions());
     }
 }

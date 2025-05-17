@@ -17,4 +17,11 @@ public class SelfDiagnosisConverter {
                 .createdAt(LocalDateTime.now())
                 .build();
     }
+
+    public static SelfDiagnosisResponse.SymptomQuestionResultDTO createSymptomQuestionResultDTO(String symptom, List<SelfDiagnosisResponse.Question> questions) {
+        return SelfDiagnosisResponse.SymptomQuestionResultDTO.builder()
+                .symptom(symptom)
+                .questions(questions)
+                .build();
+    }
 }

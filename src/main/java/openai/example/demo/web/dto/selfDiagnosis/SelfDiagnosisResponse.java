@@ -35,4 +35,22 @@ public class SelfDiagnosisResponse {
         String en;
         String ko;
     }
+
+    @Getter
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class SymptomQuestionResultDTO {
+        String symptom;
+        List<Question> questions;
+    }
+
+    @Getter
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Question {
+        String question;
+        List<String> options;
+    }
 }
