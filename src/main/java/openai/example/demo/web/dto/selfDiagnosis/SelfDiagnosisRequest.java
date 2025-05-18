@@ -34,6 +34,6 @@ public class SelfDiagnosisRequest {
         private String symptom;
 
         @NotNull
-        private List<String> answers;
+        private List<List<String>> answers;
     }
 }

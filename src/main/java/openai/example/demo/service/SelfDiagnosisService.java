@@ -105,7 +105,7 @@ public class SelfDiagnosisService {
 
         List<String> questionList = symptomQuestion.getQuestions().stream()
                 .map(SelfDiagnosisResponse.Question::getQuestion).collect(Collectors.toList());
-        List<String> answerList = request.getAnswers();
+        List<List<String>> answerList = request.getAnswers();
 
         if (questionList.size() != answerList.size()) {
             throw new SymptomHandler(ErrorStatus.SYSMPTOM_SIZE_NOT_MATCH);

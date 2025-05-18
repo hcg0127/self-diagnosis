@@ -74,7 +74,7 @@ public class ChatbotService {
         return restTemplate.postForObject(openaiApiUrl, chatbotRequest, ChatbotResponse.class);
     }
 
-    public ChatbotRequest createChatbotRequest(List<String> questionList, List<String> answerList) throws IOException {
+    public ChatbotRequest createChatbotRequest(List<String> questionList, List<List<String>> answerList) throws IOException {
 
         // OpenAI API URL로 보낼 request 작성
         // request에 넣을 response_format 불러오기
@@ -90,14 +90,14 @@ public class ChatbotService {
         // request에 user message 추가
         // user message = 사용자의 요청
         int len = questionList.size();
-        String userPrompt = "Please recommend a medical department that suits my symptoms.\n";
+        StringBuilder userPrompt = new StringBuilder("Please recommend a medical department that suits my symptoms.\n");
         for (int i=0; i<len; i++) {
-            userPrompt += "- ";
-            userPrompt += questionList.get(i);
-            userPrompt += ": ";
-            userPrompt += answerList.get(i);
+            userPrompt.append("- ")
+                    .append(questionList.get(i))
+                    .append(": ")
+                    .append(answerList.get(i));
         }
-        chatbotRequest.addMessage("user", userPrompt);
+        chatbotRequest.addMessage("user", userPrompt.toString());
 
         return chatbotRequest;
     }
