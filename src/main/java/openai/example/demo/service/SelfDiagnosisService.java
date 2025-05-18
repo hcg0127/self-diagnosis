@@ -108,7 +108,7 @@ public class SelfDiagnosisService {
         List<List<String>> answerList = request.getAnswers();
 
         if (questionList.size() != answerList.size()) {
-            throw new SymptomHandler(ErrorStatus.SYSMPTOM_SIZE_NOT_MATCH);
+            throw new SymptomHandler(ErrorStatus.SYMPTOM_SIZE_NOT_MATCH);
         }
 
         // Chatbot request와 response 만들기
