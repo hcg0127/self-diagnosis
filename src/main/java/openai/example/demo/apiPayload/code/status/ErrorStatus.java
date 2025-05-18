@@ -17,7 +17,11 @@ public enum ErrorStatus implements BaseErrorCode {
     _FORBIDDEN(HttpStatus.FORBIDDEN, "COMMON403", "금지된 요청입니다."),
 
     //parse
-    JSON_FORMAT_UNMATCHED(HttpStatus.NOT_FOUND, "JSON4001", "JSON 형식이 올바르지 않습니다. 토큰의 최댓값을 늘려주세요.");
+    JSON_FORMAT_UNMATCHED(HttpStatus.NOT_FOUND, "JSON4001", "JSON 형식이 올바르지 않습니다. 토큰의 최댓값을 늘려주세요."),
+
+    //symptom
+    SYMPTOM_NOT_FOUND(HttpStatus.NOT_FOUND, "SYMPTOM4001", "해당하는 증상을 찾을 수 없습니다."),
+    SYSMPTOM_SIZE_NOT_MATCH(HttpStatus.BAD_REQUEST, "SYMPTOM4002", "질문과 답변의 개수가 일치하지 않습니다.");
 
     private final HttpStatus httpStatus;
     private final String code;

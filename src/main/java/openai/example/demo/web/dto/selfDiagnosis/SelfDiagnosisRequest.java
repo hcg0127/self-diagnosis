@@ -3,6 +3,8 @@ package openai.example.demo.web.dto.selfDiagnosis;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.List;
+
 public class SelfDiagnosisRequest {
 
     @Builder
@@ -20,5 +22,18 @@ public class SelfDiagnosisRequest {
         private String condition;
 
         private String additionalNote;
+    }
+
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class CreateDepartmentDTO {
+
+        @NotNull
+        private String symptom;
+
+        @NotNull
+        private List<String> answers;
     }
 }

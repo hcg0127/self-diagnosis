@@ -18,7 +18,7 @@ public class SelfDiagnosisController {
 
     private final SelfDiagnosisService selfDiagnosisService;
 
-    @PostMapping("/chat")
+    @PostMapping("/v1/chat")
     public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
         SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createSelfDiagnosis(req);
         return ApiResponse.onSuccess(result);
@@ -27,6 +27,12 @@ public class SelfDiagnosisController {
     @PostMapping("/symptom-question")
     public ApiResponse<SelfDiagnosisResponse.SymptomQuestionResultDTO> getSymptomQuestion(@RequestBody @RequestParam("symptom") String symptom) throws IOException {
         SelfDiagnosisResponse.SymptomQuestionResultDTO result = selfDiagnosisService.createSymptomQuestion(symptom);
+        return ApiResponse.onSuccess(result);
+    }
+
+    @PostMapping("/v2/chat")
+    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDepartmentDTO req) throws IOException, ParseException {
+        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createDepartment(req);
         return ApiResponse.onSuccess(result);
     }
 }

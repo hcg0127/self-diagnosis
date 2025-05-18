@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import openai.example.demo.apiPayload.code.status.ErrorStatus;
 import openai.example.demo.apiPayload.exception.handler.JsonParserHanlder;
+import openai.example.demo.apiPayload.exception.handler.SymptomHandler;
 import openai.example.demo.converter.SelfDiagnosisConverter;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
@@ -21,6 +22,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -29,11 +32,18 @@ public class SelfDiagnosisService {
 
     private final ChatbotService chatbotService;
 
+    private static final Set<String> SYMPTOM_LIST = Set.of("구토","두통","메스꺼움","복통","어지러움");
+
     public SelfDiagnosisResponse.CreateResultDTO createSelfDiagnosis(SelfDiagnosisRequest.CreateDTO request) throws IOException, ParseException {
 
         // Chatbot request와 response 만들기
         ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(request);
         ChatbotResponse chatbotResponse = chatbotService.craeteChatbotResponse(chatbotRequest);
+
+        return parseChatMessage(chatbotResponse);
+    }
+
+    public SelfDiagnosisResponse.CreateResultDTO parseChatMessage(ChatbotResponse chatbotResponse) throws IOException, ParseException {
 
         // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
@@ -62,17 +72,39 @@ public class SelfDiagnosisService {
             return SelfDiagnosisConverter.createResultDTO(chatbotResponse.getId(), departmentList, reasonObject);
         } else
             throw new JsonParserHanlder(ErrorStatus.JSON_FORMAT_UNMATCHED);
-
     }
 
     public SelfDiagnosisResponse.SymptomQuestionResultDTO createSymptomQuestion(String symptom) throws IOException {
 
-        String url = "src/main/resources/static/symptom-question/" + symptom + ".json";
+        if (!SYMPTOM_LIST.contains(symptom)) {
+            throw new SymptomHandler(ErrorStatus.SYMPTOM_NOT_FOUND);
+        }
+
+        String path = "src/main/resources/static/symptom-question/" + symptom + ".json";
 
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode rootNode = mapper.readTree(new File(url));
+        JsonNode rootNode = mapper.readTree(new File(path));
         SelfDiagnosisResponse.SymptomQuestionResultDTO result = mapper.treeToValue(rootNode, SelfDiagnosisResponse.SymptomQuestionResultDTO.class);
 
         return SelfDiagnosisConverter.createSymptomQuestionResultDTO(symptom, result.getQuestions());
+    }
+
+    public SelfDiagnosisResponse.CreateResultDTO createDepartment(SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
+
+        SelfDiagnosisResponse.SymptomQuestionResultDTO symptomQuestion = createSymptomQuestion(request.getSymptom());
+
+        List<String> questionList = symptomQuestion.getQuestions().stream()
+                .map(SelfDiagnosisResponse.Question::getQuestion).collect(Collectors.toList());
+        List<String> answerList = request.getAnswers();
+
+        if (questionList.size() != answerList.size()) {
+            throw new SymptomHandler(ErrorStatus.SYSMPTOM_SIZE_NOT_MATCH);
+        }
+
+        // Chatbot request와 response 만들기
+        ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(questionList, answerList);
+        ChatbotResponse chatbotResponse = chatbotService.craeteChatbotResponse(chatbotRequest);
+
+        return parseChatMessage(chatbotResponse);
     }
 }

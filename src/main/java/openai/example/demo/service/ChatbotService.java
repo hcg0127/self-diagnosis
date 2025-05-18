@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -71,5 +72,33 @@ public class ChatbotService {
 
         // OpenAI response를 객체로 변환해서 가져오기
         return restTemplate.postForObject(openaiApiUrl, chatbotRequest, ChatbotResponse.class);
+    }
+
+    public ChatbotRequest createChatbotRequest(List<String> questionList, List<String> answerList) throws IOException {
+
+        // OpenAI API URL로 보낼 request 작성
+        // request에 넣을 response_format 불러오기
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode rootNode = mapper.readTree(new File("src/main/resources/static/self-diagnosis/chat-response-format.json"));
+        ChatbotRequest chatbotRequest = ChatbotConverter.toChatbotRequest(model, 0, 256, 1.0, -0.5, rootNode);
+
+        // request에 develop message 추가
+        // develop message = 모델에게 정확한 지시 내리기
+        String developerPrompt = Files.readString(Paths.get("src/main/resources/static/self-diagnosis/developer-prompt.txt"), StandardCharsets.UTF_8);
+        chatbotRequest.addMessage("developer", developerPrompt);
+
+        // request에 user message 추가
+        // user message = 사용자의 요청
+        int len = questionList.size();
+        String userPrompt = "Please recommend a medical department that suits my symptoms.\n";
+        for (int i=0; i<len; i++) {
+            userPrompt += "- ";
+            userPrompt += questionList.get(i);
+            userPrompt += ": ";
+            userPrompt += answerList.get(i);
+        }
+        chatbotRequest.addMessage("user", userPrompt);
+
+        return chatbotRequest;
     }
 }
