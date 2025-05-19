@@ -32,6 +32,7 @@ public class SelfDiagnosisService {
 
     private final ChatbotService chatbotService;
 
+    // V2: Symptom을 Entity 대신 Set<String>으로 저장 -> O(1)로 찾기
     private static final Set<String> SYMPTOM_LIST = Set.of("두통", "어지러움", "메스꺼움", "구토", "복통", "가슴 통증", "소화 불량", "변비", "설사", "배변 시 통증",
             "소변 시 통증", "혈뇨", "빈뇨", "요실금", "기침", "가래", "호흡 곤란", "재채기", "코막힘", "콧물",
             "인후통", "쉰 목소리", "청력 저하", "귀 통증", "이명", "눈물", "눈 가려움", "시야 흐림", "눈 충혈", "결막염 증상",
@@ -44,6 +45,7 @@ public class SelfDiagnosisService {
             "멍이 잘 듦", "잇몸 출혈", "코피", "혈변", "호흡 시 통증", "숨소리 이상", "가슴 답답함", "팔 마비", "다리 마비", "입술 마비"
     );
 
+    // V1: request(system - symptom - condition - additionalNote) -> response
     public SelfDiagnosisResponse.CreateResultDTO createSelfDiagnosis(SelfDiagnosisRequest.CreateDTO request) throws IOException, ParseException {
 
         // Chatbot request와 response 만들기
@@ -53,7 +55,8 @@ public class SelfDiagnosisService {
         return parseChatMessage(chatbotResponse);
     }
 
-    public SelfDiagnosisResponse.CreateResultDTO parseChatMessage(ChatbotResponse chatbotResponse) throws IOException, ParseException {
+    // COMMON: response(JSONObject) -> parsing -> ResultDTO
+    public SelfDiagnosisResponse.CreateResultDTO parseChatMessage(ChatbotResponse chatbotResponse) throws ParseException {
 
         // response의 message(role, content)에서 content 추출
         String choiceContent = chatbotResponse.getChoices().getFirst().getMessage().getContent();
@@ -84,6 +87,7 @@ public class SelfDiagnosisService {
             throw new JsonParserHanlder(ErrorStatus.JSON_FORMAT_UNMATCHED);
     }
 
+    // V2: request(symptom) -> response(symptom.json)
     public SelfDiagnosisResponse.SymptomQuestionResultDTO createSymptomQuestion(String symptom) throws IOException {
 
         if (!SYMPTOM_LIST.contains(symptom)) {
@@ -99,6 +103,7 @@ public class SelfDiagnosisService {
         return SelfDiagnosisConverter.createSymptomQuestionResultDTO(symptom, result.getQuestions());
     }
 
+    // V2: request(symptom, answers) -> response
     public SelfDiagnosisResponse.CreateResultDTO createDepartment(SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
 
         SelfDiagnosisResponse.SymptomQuestionResultDTO symptomQuestion = createSymptomQuestion(request.getSymptom());
