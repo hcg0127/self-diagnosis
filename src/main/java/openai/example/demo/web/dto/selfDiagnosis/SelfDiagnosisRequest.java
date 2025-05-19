@@ -30,10 +30,28 @@ public class SelfDiagnosisRequest {
     @NoArgsConstructor
     public static class CreateDepartmentDTO {
 
+        // V3
+        @NotNull
+        private String lang;
+
         @NotNull
         private String symptom;
 
         @NotNull
         private List<List<String>> answers;
+    }
+
+    // V3
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class CreateSymptomQuestionsDTO {
+
+        @NotNull
+        private String lang;
+
+        @NotNull
+        private String symptomName;
     }
 }

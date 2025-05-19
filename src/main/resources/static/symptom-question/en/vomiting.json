@@ -1,0 +1,46 @@
+{
+  "symptom": "Vomiting",
+  "questions": [
+    {
+      "question": "When did the vomiting start?",
+      "options": [
+        "Today",
+        "1–3 days ago",
+        "More than a week ago"
+      ]
+    },
+    {
+      "question": "Where do you feel the vomiting sensation?",
+      "options": [
+        "Front",
+        "Side",
+        "Back",
+        "All over"
+      ]
+    },
+    {
+      "question": "Is the vomiting continuous or intermittent?",
+      "options": [
+        "Continuous",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "How severe is the symptom?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Very severe"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Pain",
+        "Itching",
+        "Blurred vision",
+        "None"
+      ]
+    }
+  ]
+}

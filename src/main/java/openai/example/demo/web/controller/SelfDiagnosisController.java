@@ -18,21 +18,33 @@ public class SelfDiagnosisController {
 
     private final SelfDiagnosisService selfDiagnosisService;
 
-    @PostMapping("/v1/chat")
-    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
-        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createSelfDiagnosis(req);
+//    @PostMapping("/v1/chat")
+//    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDTO req) throws IOException, ParseException {
+//        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createSelfDiagnosis(req);
+//        return ApiResponse.onSuccess(result);
+//    }
+
+//    @PostMapping("/v2/symptom-questions")
+//    public ApiResponse<SelfDiagnosisResponse.SymptomQuestionResultDTO> getSymptomQuestions(@RequestParam("symptom") String symptom) throws IOException {
+//        SelfDiagnosisResponse.SymptomQuestionResultDTO result = selfDiagnosisService.createSymptomQuestions(symptom);
+//        return ApiResponse.onSuccess(result);
+//    }
+
+//    @PostMapping("/v2/chat")
+//    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDepartmentDTO req) throws IOException, ParseException {
+//        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createDepartment(req);
+//        return ApiResponse.onSuccess(result);
+//    }
+
+    @PostMapping("/v3/symptom-questions")
+    public ApiResponse<SelfDiagnosisResponse.SymptomQuestionResultDTO> getSymptomQuestions(@RequestBody @Valid SelfDiagnosisRequest.CreateSymptomQuestionsDTO request) throws IOException {
+        SelfDiagnosisResponse.SymptomQuestionResultDTO result = selfDiagnosisService.createSymptomQuestions(request);
         return ApiResponse.onSuccess(result);
     }
 
-    @PostMapping("/symptom-question")
-    public ApiResponse<SelfDiagnosisResponse.SymptomQuestionResultDTO> getSymptomQuestion(@RequestBody @RequestParam("symptom") String symptom) throws IOException {
-        SelfDiagnosisResponse.SymptomQuestionResultDTO result = selfDiagnosisService.createSymptomQuestion(symptom);
-        return ApiResponse.onSuccess(result);
-    }
-
-    @PostMapping("/v2/chat")
-    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> chat(@Valid @RequestBody SelfDiagnosisRequest.CreateDepartmentDTO req) throws IOException, ParseException {
-        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createDepartment(req);
+    @PostMapping("/v3/chat")
+    public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> getSelfDiagnosisResult(@RequestBody @Valid SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
+        SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createDepartmentResult(request);
         return ApiResponse.onSuccess(result);
     }
 }
