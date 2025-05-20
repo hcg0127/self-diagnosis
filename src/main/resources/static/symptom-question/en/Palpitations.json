@@ -1,0 +1,50 @@
+{
+  "symptom": "Palpitations",
+  "questions": [
+    {
+      "question": "When did the palpitations start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Occasionally"
+      ]
+    },
+    {
+      "question": "What is the nature of the palpitations?",
+      "options": [
+        "Fast",
+        "Irregular",
+        "Throbbing",
+        "Skipped beats"
+      ]
+    },
+    {
+      "question": "Do you have any accompanying symptoms (dizziness, shortness of breath, etc.)?",
+      "options": [
+        "Dizziness",
+        "Shortness of breath",
+        "Chest pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Are the palpitations related to specific situations (exercise, stress, etc.)?",
+      "options": [
+        "During exercise",
+        "During stress",
+        "At rest",
+        "Unrelated"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Breathing exercises",
+        "Avoided caffeine",
+        "Took sedatives",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Night sweats",
+  "questions": [
+    {
+      "question": "When did you start sweating heavily at night?",
+      "options": [
+        "Last night",
+        "A few days ago",
+        "More than a week ago"
+      ]
+    },
+    {
+      "question": "How much do you sweat?",
+      "options": [
+        "A little",
+        "Moderate",
+        "A lot",
+        "Soaked bedding"
+      ]
+    },
+    {
+      "question": "When is it worse?",
+      "options": [
+        "Hot room",
+        "After exercise",
+        "During stress",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g., fever, chills)?",
+      "options": [
+        "Fever",
+        "Chills",
+        "Headache",
+        "None"
+      ]
+    },
+    {
+      "question": "What have you tried to manage it?",
+      "options": [
+        "Change clothes/bedding",
+        "Fan/AC",
+        "Antiperspirant",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "symptom": "Hand tremor",
+  "questions": [
+    {
+      "question": "When did your hand tremor start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the pattern of the tremor?",
+      "options": [
+        "Rhythmic (oscillating)",
+        "Irregular",
+        "At rest",
+        "With movement"
+      ]
+    },
+    {
+      "question": "Which hand is more affected?",
+      "options": [
+        "Right hand",
+        "Left hand",
+        "Both hands equally"
+      ]
+    },
+    {
+      "question": "How strong is the tremor?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (e.g., bradykinesia, muscle rigidity)?",
+      "options": [
+        "Rigidity",
+        "Slowness of movement",
+        "Sensory abnormality",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Nausea",
+  "questions": [
+    {
+      "question": "When did you start feeling nauseous?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "A few days ago"
+      ]
+    },
+    {
+      "question": "When is the nausea most noticeable?",
+      "options": [
+        "After eating",
+        "When hungry",
+        "While moving",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "How long does the nausea last?",
+      "options": [
+        "Minutes",
+        "Hours",
+        "More than a day",
+        "Constant"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g., vomiting, dizziness)?",
+      "options": [
+        "Vomiting",
+        "Dizziness",
+        "Loss of appetite",
+        "None"
+      ]
+    },
+    {
+      "question": "What have you tried to relieve the nausea?",
+      "options": [
+        "Ginger tea",
+        "Diet adjustment",
+        "Sedatives",
+        "None"
+      ]
+    }
+  ]
+}

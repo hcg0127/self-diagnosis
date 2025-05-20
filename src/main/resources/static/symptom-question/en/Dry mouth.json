@@ -1,0 +1,49 @@
+{
+  "symptom": "Dry mouth",
+  "questions": [
+    {
+      "question": "When did your dry mouth start?",
+      "options": [
+        "Today",
+        "Hours ago",
+        "A few days ago"
+      ]
+    },
+    {
+      "question": "How severe is the dryness?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Mouth feels parched"
+      ]
+    },
+    {
+      "question": "When does it usually worsen?",
+      "options": [
+        "Upon waking",
+        "At night",
+        "Before/after meals",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (thirst, bad breath)?",
+      "options": [
+        "Thirst",
+        "Difficulty chewing",
+        "Throat pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Drinking water",
+        "Oral spray",
+        "Candy/gum",
+        "None"
+      ]
+    }
+  ]
+}

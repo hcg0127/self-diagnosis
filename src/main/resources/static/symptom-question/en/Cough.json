@@ -1,0 +1,49 @@
+{
+  "symptom": "Cough",
+  "questions": [
+    {
+      "question": "When did the cough start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What type of cough is it?",
+      "options": [
+        "Dry cough",
+        "Productive with phlegm",
+        "Intermittent",
+        "Continuous"
+      ]
+    },
+    {
+      "question": "Is there a time of day when it worsens?",
+      "options": [
+        "Morning",
+        "Night",
+        "All day",
+        "Specific triggers"
+      ]
+    },
+    {
+      "question": "Are there other symptoms besides cough?",
+      "options": [
+        "Fever",
+        "Sore throat",
+        "Shortness of breath",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve the cough?",
+      "options": [
+        "Fluid intake",
+        "Cough syrup",
+        "Humidifier",
+        "None"
+      ]
+    }
+  ]
+}

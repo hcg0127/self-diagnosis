@@ -1,0 +1,48 @@
+{
+  "symptom": "Itchy eyes",
+  "questions": [
+    {
+      "question": "When did your eyes start itching?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How severe is the itching?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ]
+    },
+    {
+      "question": "In what situations does it worsen?",
+      "options": [
+        "Wind",
+        "Dust",
+        "Eye rubbing",
+        "No specific trigger"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Tearing",
+        "Redness",
+        "Swelling",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Artificial tears",
+        "Cold compress",
+        "Antihistamines",
+        "None"
+      ]
+    }
+  ]
+}

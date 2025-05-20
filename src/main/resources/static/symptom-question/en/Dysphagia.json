@@ -1,0 +1,50 @@
+{
+  "symptom": "Dysphagia",
+  "questions": [
+    {
+      "question": "When did swallowing become difficult?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Which phase of swallowing is difficult?",
+      "options": [
+        "Mouth to throat",
+        "Throat to esophagus",
+        "Esophageal passage",
+        "All stages"
+      ]
+    },
+    {
+      "question": "Any related symptoms (e.g. chest pain, regurgitation)?",
+      "options": [
+        "Chest pain",
+        "Regurgitation",
+        "Food sticking",
+        "None"
+      ]
+    },
+    {
+      "question": "Is it harder to swallow solids or liquids?",
+      "options": [
+        "Liquids",
+        "Solids",
+        "Same",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "What have you tried to improve swallowing?",
+      "options": [
+        "Drinking water",
+        "Chewing thoroughly",
+        "Swallowing exercises",
+        "None"
+      ]
+    }
+  ]
+}

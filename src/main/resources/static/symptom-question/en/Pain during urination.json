@@ -1,0 +1,47 @@
+{
+  "symptom": "Pain during urination",
+  "questions": [
+    {
+      "question": "When did you start feeling pain during urination?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Burning",
+        "Scalding",
+        "Dull ache"
+      ]
+    },
+    {
+      "question": "Does the pain persist after urination?",
+      "options": [
+        "Yes, it remains",
+        "Temporary",
+        "No"
+      ]
+    },
+    {
+      "question": "Are there other accompanying symptoms?",
+      "options": [
+        "Frequent urination",
+        "Blood in urine",
+        "Feeling of incomplete emptying",
+        "None"
+      ]
+    },
+    {
+      "question": "Does drinking plenty of water change the pain?",
+      "options": [
+        "Relieves",
+        "No change",
+        "Worsens"
+      ]
+    }
+  ]
+}

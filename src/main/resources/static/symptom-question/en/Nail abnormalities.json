@@ -1,0 +1,48 @@
+{
+  "symptom": "Nail abnormalities",
+  "questions": [
+    {
+      "question": "When did the nail changes start?",
+      "options": [
+        "Weeks ago",
+        "Over a month ago",
+        "Over six months ago"
+      ]
+    },
+    {
+      "question": "What kind of abnormalities are present?",
+      "options": [
+        "Color changes",
+        "Thickening/thinning",
+        "Brittle/cracked",
+        "Shape deformation"
+      ]
+    },
+    {
+      "question": "Is there pain or tenderness?",
+      "options": [
+        "Yes",
+        "Intermittent",
+        "None"
+      ]
+    },
+    {
+      "question": "Is there surrounding skin change?",
+      "options": [
+        "Inflammation",
+        "Swelling",
+        "Erythema",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any treatments?",
+      "options": [
+        "Medicated ointment",
+        "Cosmetic care",
+        "Moisturizer",
+        "None"
+      ]
+    }
+  ]
+}

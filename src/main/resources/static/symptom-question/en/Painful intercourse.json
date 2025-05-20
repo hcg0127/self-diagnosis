@@ -1,0 +1,50 @@
+{
+  "symptom": "Painful intercourse",
+  "questions": [
+    {
+      "question": "When did the pain during intercourse start?",
+      "options": [
+        "Since first time",
+        "A few days ago",
+        "More than a week ago",
+        "Occasionally"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Vaginal opening",
+        "Deep inside vagina",
+        "Pelvis",
+        "Entire perineum"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Pressing",
+        "Aching",
+        "Dull"
+      ]
+    },
+    {
+      "question": "Do you have other symptoms after sex?",
+      "options": [
+        "Bleeding",
+        "Discharge",
+        "Burning sensation",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Changed position",
+        "Used lubricant",
+        "Painkillers",
+        "None"
+      ]
+    }
+  ]
+}

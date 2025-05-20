@@ -1,0 +1,48 @@
+{
+  "symptom": "Foot pain",
+  "questions": [
+    {
+      "question": "When did your plantar pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where on your sole is the pain?",
+      "options": [
+        "Heel",
+        "Ball of foot",
+        "Under toes",
+        "Entire sole"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Burning",
+        "Dull ache",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Is the pain different when walking versus resting?",
+      "options": [
+        "Worse when walking",
+        "Worse at rest",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (swelling, redness)?",
+      "options": [
+        "Swelling",
+        "Redness",
+        "Sensory loss",
+        "None"
+      ]
+    }
+  ]
+}

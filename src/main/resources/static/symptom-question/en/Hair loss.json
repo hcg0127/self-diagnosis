@@ -1,0 +1,49 @@
+{
+  "symptom": "Hair loss",
+  "questions": [
+    {
+      "question": "When did your hair loss start?",
+      "options": [
+        "Recent weeks",
+        "Over a month ago",
+        "Over six months ago"
+      ]
+    },
+    {
+      "question": "What is the pattern of hair loss?",
+      "options": [
+        "Patchy",
+        "Diffuse thinning",
+        "Receding M-shape",
+        "Vertex-centric"
+      ]
+    },
+    {
+      "question": "How much hair is lost?",
+      "options": [
+        "A handful with wind",
+        "50–100 strands daily",
+        "General thinning",
+        "Clumps"
+      ]
+    },
+    {
+      "question": "Are there any scalp symptoms (itching, pain)?",
+      "options": [
+        "Itching",
+        "Pain",
+        "Dandruff",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to improve it?",
+      "options": [
+        "Supplements",
+        "Medication (minoxidil, etc.)",
+        "Scalp massage",
+        "None"
+      ]
+    }
+  ]
+}

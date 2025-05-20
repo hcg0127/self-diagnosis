@@ -1,0 +1,49 @@
+{
+  "symptom": "Poor concentration",
+  "questions": [
+    {
+      "question": "When did you start having difficulty concentrating?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations do you have concentration issues?",
+      "options": [
+        "Work/study",
+        "During conversations",
+        "Watching TV",
+        "All situations"
+      ]
+    },
+    {
+      "question": "How severe is your concentration difficulty?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Impossible"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (fatigue, memory decline)?",
+      "options": [
+        "Fatigue",
+        "Memory decline",
+        "Anxiety",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to improve it?",
+      "options": [
+        "Short breaks",
+        "Changing environment",
+        "Caffeine intake",
+        "None"
+      ]
+    }
+  ]
+}

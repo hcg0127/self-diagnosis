@@ -1,0 +1,50 @@
+{
+  "symptom": "Hypotension",
+  "questions": [
+    {
+      "question": "What was your recent blood pressure reading?",
+      "options": [
+        "90/60 or lower",
+        "90/60–100/65",
+        "100/65–120/80",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Do you have symptoms when your blood pressure is low?",
+      "options": [
+        "Dizziness",
+        "Near fainting",
+        "Fatigue",
+        "None"
+      ]
+    },
+    {
+      "question": "Do you feel dizzy when changing positions?",
+      "options": [
+        "When standing",
+        "When lying down",
+        "When sitting then standing",
+        "None"
+      ]
+    },
+    {
+      "question": "Do symptoms change after fluid or salt intake?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Do you have underlying conditions or take medications?",
+      "options": [
+        "Yes",
+        "No",
+        "Not sure",
+        "Had in the past"
+      ]
+    }
+  ]
+}

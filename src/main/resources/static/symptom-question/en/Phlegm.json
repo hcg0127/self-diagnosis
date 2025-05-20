@@ -1,0 +1,46 @@
+{
+  "symptom": "Phlegm",
+  "questions": [
+    {
+      "question": "When did phlegm production begin?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the color of the phlegm?",
+      "options": [
+        "Clear",
+        "White",
+        "Yellow",
+        "Green/mucus"
+      ]
+    },
+    {
+      "question": "How often do you produce phlegm?",
+      "options": [
+        "Once a day",
+        "2–3 times",
+        "4 or more times"
+      ]
+    },
+    {
+      "question": "Is it expelled with coughing?",
+      "options": [
+        "Yes, when coughing",
+        "Phlegm alone",
+        "Not expelled"
+      ]
+    },
+    {
+      "question": "How do you feel after expelling phlegm?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

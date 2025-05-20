@@ -1,0 +1,48 @@
+{
+  "symptom": "Conjunctivitis symptoms",
+  "questions": [
+    {
+      "question": "When did your conjunctivitis symptoms start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Which symptom is most severe?",
+      "options": [
+        "Redness",
+        "Tearing",
+        "Itching",
+        "Discharge"
+      ]
+    },
+    {
+      "question": "What is the color of the discharge?",
+      "options": [
+        "Clear",
+        "White",
+        "Yellow/green",
+        "None"
+      ]
+    },
+    {
+      "question": "Is it in one eye or both?",
+      "options": [
+        "Left eye",
+        "Right eye",
+        "Both eyes"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Artificial tears",
+        "Antibiotic ointment",
+        "Cold compress",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "symptom": "Hypertension",
+  "questions": [
+    {
+      "question": "What was your recent blood pressure reading?",
+      "options": [
+        "140/90 or higher",
+        "130/80–139/89",
+        "120/80–129/84",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Do you have any symptoms when your blood pressure is high?",
+      "options": [
+        "Headache",
+        "Dizziness",
+        "Palpitations",
+        "None"
+      ]
+    },
+    {
+      "question": "Are you taking blood pressure medication?",
+      "options": [
+        "Yes, regularly",
+        "Yes, occasionally",
+        "No",
+        "Used in the past"
+      ]
+    },
+    {
+      "question": "Have you tried lifestyle changes (diet/exercise)?",
+      "options": [
+        "Low-salt diet",
+        "Exercise",
+        "Weight control",
+        "None"
+      ]
+    },
+    {
+      "question": "What is your current stress level?",
+      "options": [
+        "Very high",
+        "High",
+        "Moderate",
+        "Low"
+      ]
+    }
+  ]
+}

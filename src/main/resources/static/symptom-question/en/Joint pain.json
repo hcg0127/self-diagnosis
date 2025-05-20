@@ -1,0 +1,48 @@
+{
+  "symptom": "Joint pain",
+  "questions": [
+    {
+      "question": "When did your joint pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Which joint is affected?",
+      "options": [
+        "Wrist/fingers",
+        "Elbow",
+        "Shoulder",
+        "Knee/ankle"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Dull ache",
+        "Crepitus",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Does movement (flexion/extension) change the pain?",
+      "options": [
+        "Worsens",
+        "Improves",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (swelling, warmth)?",
+      "options": [
+        "Swelling",
+        "Warmth",
+        "Redness",
+        "None"
+      ]
+    }
+  ]
+}

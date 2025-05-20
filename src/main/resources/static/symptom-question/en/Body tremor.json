@@ -1,0 +1,50 @@
+{
+  "symptom": "Body tremor",
+  "questions": [
+    {
+      "question": "When did the tremors start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Where do you mostly feel the tremor?",
+      "options": [
+        "Whole body",
+        "Hands",
+        "Legs",
+        "Torso"
+      ]
+    },
+    {
+      "question": "How intense is the tremor?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Spasmodic"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g., fever, chills)?",
+      "options": [
+        "Fever",
+        "Chills",
+        "Cold sweat",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to reduce the tremor?",
+      "options": [
+        "Warm compress",
+        "Relaxation exercises",
+        "Sedatives",
+        "None"
+      ]
+    }
+  ]
+}

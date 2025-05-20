@@ -1,0 +1,49 @@
+{
+  "symptom": "Pale skin",
+  "questions": [
+    {
+      "question": "When did your skin become pale?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Which parts of your body look pale?",
+      "options": [
+        "Whole body",
+        "Face",
+        "Hands and feet",
+        "Mucous membranes"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g. fatigue, dizziness)?",
+      "options": [
+        "Fatigue",
+        "Dizziness",
+        "Cold sweat",
+        "None"
+      ]
+    },
+    {
+      "question": "Does the paleness improve after eating or resting?",
+      "options": [
+        "Improves",
+        "No change",
+        "Worsens",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Have you experienced this before?",
+      "options": [
+        "Yes",
+        "No",
+        "Not sure"
+      ]
+    }
+  ]
+}

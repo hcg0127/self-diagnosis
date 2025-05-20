@@ -1,0 +1,50 @@
+{
+  "symptom": "Fainting",
+  "questions": [
+    {
+      "question": "When did you first faint?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Were there any warning signs before fainting?",
+      "options": [
+        "Dizziness",
+        "Nausea",
+        "Blurred vision",
+        "None"
+      ]
+    },
+    {
+      "question": "How long did the fainting episode last?",
+      "options": [
+        "Seconds",
+        "Tens of seconds",
+        "Minutes",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "How did you feel after regaining consciousness?",
+      "options": [
+        "Fully recovered",
+        "Confused",
+        "Fatigue",
+        "Memory loss"
+      ]
+    },
+    {
+      "question": "What were you doing when it happened?",
+      "options": [
+        "Standing up",
+        "Exercising",
+        "After eating",
+        "No clear reason"
+      ]
+    }
+  ]
+}

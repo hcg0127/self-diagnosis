@@ -1,0 +1,49 @@
+{
+  "symptom": "Insomnia",
+  "questions": [
+    {
+      "question": "When did you start having difficulty falling asleep?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What sleep issue do you mainly have?",
+      "options": [
+        "Difficulty falling asleep",
+        "Waking up frequently",
+        "Waking up early",
+        "Light sleep"
+      ]
+    },
+    {
+      "question": "How many hours do you sleep on average?",
+      "options": [
+        "2 hours or less",
+        "2–4 hours",
+        "4–6 hours",
+        "Over 6 hours"
+      ]
+    },
+    {
+      "question": "Are there environmental factors affecting your sleep?",
+      "options": [
+        "Noise",
+        "Light",
+        "Stress",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to improve sleep?",
+      "options": [
+        "Taking sleep medication",
+        "Meditation/relaxation",
+        "Limiting caffeine",
+        "None"
+      ]
+    }
+  ]
+}

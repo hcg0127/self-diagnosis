@@ -1,0 +1,47 @@
+{
+  "symptom": "Anxiety",
+  "questions": [
+    {
+      "question": "When did you start feeling anxious?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations do you feel anxiety?",
+      "options": [
+        "Interpersonal",
+        "Work/academic",
+        "Moving spaces",
+        "All situations"
+      ]
+    },
+    {
+      "question": "Are there physical symptoms of anxiety?",
+      "options": [
+        "Palpitations",
+        "Sweating",
+        "Trembling",
+        "Dizziness"
+      ]
+    },
+    {
+      "question": "Is your anxiety constant or intermittent?",
+      "options": [
+        "Constant",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to relieve it?",
+      "options": [
+        "Breathing exercises",
+        "Meditation/relaxation",
+        "Counseling",
+        "None"
+      ]
+    }
+  ]
+}

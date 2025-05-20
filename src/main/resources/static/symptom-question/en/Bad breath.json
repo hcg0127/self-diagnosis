@@ -1,0 +1,49 @@
+{
+  "symptom": "Bad breath",
+  "questions": [
+    {
+      "question": "When did you notice bad breath?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How strong is the odor?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Strong",
+        "Very strong"
+      ]
+    },
+    {
+      "question": "Does it worsen in certain situations?",
+      "options": [
+        "On an empty stomach",
+        "After eating",
+        "Upon waking",
+        "No change"
+      ]
+    },
+    {
+      "question": "Does oral care (brushing, gargling) change it?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened",
+        "Not tried"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (dry mouth, oral inflammation)?",
+      "options": [
+        "Dry mouth",
+        "Oral inflammation",
+        "Gingivitis",
+        "None"
+      ]
+    }
+  ]
+}

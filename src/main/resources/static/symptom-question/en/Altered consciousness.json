@@ -1,0 +1,50 @@
+{
+  "symptom": "Altered consciousness",
+  "questions": [
+    {
+      "question": "When did your consciousness begin to decline?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Suddenly"
+      ]
+    },
+    {
+      "question": "How severe is your confusion or reduced awareness?",
+      "options": [
+        "Mild confusion",
+        "Semiconscious",
+        "Near coma",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. seizures, dizziness)?",
+      "options": [
+        "Seizures",
+        "Dizziness",
+        "Vomiting",
+        "None"
+      ]
+    },
+    {
+      "question": "What do you think caused it?",
+      "options": [
+        "Trauma",
+        "Low blood sugar",
+        "Stress",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Do you remember what happened afterward?",
+      "options": [
+        "Fully",
+        "Partially",
+        "No memory",
+        "Not sure"
+      ]
+    }
+  ]
+}

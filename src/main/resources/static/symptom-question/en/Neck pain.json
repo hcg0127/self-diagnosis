@@ -1,0 +1,48 @@
+{
+  "symptom": "Neck pain",
+  "questions": [
+    {
+      "question": "When did your neck pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Upper cervical",
+        "Mid cervical",
+        "Entire posterior neck",
+        "One side"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Sharp",
+        "Dull ache",
+        "Stiffness",
+        "Clicking"
+      ]
+    },
+    {
+      "question": "Does head movement (rotation/flexion) change the pain?",
+      "options": [
+        "Worsens",
+        "Improves",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (headache, arm numbness)?",
+      "options": [
+        "Headache",
+        "Arm numbness",
+        "Shoulder stiffness",
+        "None"
+      ]
+    }
+  ]
+}

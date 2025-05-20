@@ -1,0 +1,48 @@
+{
+  "symptom": "Hoarse voice",
+  "questions": [
+    {
+      "question": "When did your voice become hoarse?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How severe is the hoarseness?",
+      "options": [
+        "Slightly hoarse",
+        "More than 50% voice reduction",
+        "Almost unable to speak"
+      ]
+    },
+    {
+      "question": "Have you tried anything to restore your voice?",
+      "options": [
+        "Rest",
+        "Gargle",
+        "Spray",
+        "None"
+      ]
+    },
+    {
+      "question": "Are there any other symptoms?",
+      "options": [
+        "Sore throat",
+        "Cough",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "In what situations do you use your voice?",
+      "options": [
+        "Singing",
+        "Talking",
+        "Loud talking",
+        "No specific"
+      ]
+    }
+  ]
+}

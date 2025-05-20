@@ -1,0 +1,49 @@
+{
+  "symptom": "Tingling in hands and feet",
+  "questions": [
+    {
+      "question": "When did the tingling in your hands or feet begin?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Which areas are affected?",
+      "options": [
+        "Hands",
+        "Feet",
+        "Both hands",
+        "Both feet"
+      ]
+    },
+    {
+      "question": "How would you describe the sensation?",
+      "options": [
+        "Numbness",
+        "Pins and needles",
+        "Burning",
+        "With tremor"
+      ]
+    },
+    {
+      "question": "Does posture or movement affect the sensation?",
+      "options": [
+        "Yes",
+        "No",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Are there other symptoms like swelling or weakness?",
+      "options": [
+        "Swelling",
+        "Muscle weakness",
+        "Pain",
+        "None"
+      ]
+    }
+  ]
+}

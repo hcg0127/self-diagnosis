@@ -1,0 +1,47 @@
+{
+  "symptom": "Red eyes",
+  "questions": [
+    {
+      "question": "When did your eyes become red?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How severe is the redness?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ]
+    },
+    {
+      "question": "Is it in one eye or both?",
+      "options": [
+        "Left eye",
+        "Right eye",
+        "Both eyes"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Itching",
+        "Pain",
+        "Tearing",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Artificial tears",
+        "Cold compress",
+        "Antihistamines",
+        "None"
+      ]
+    }
+  ]
+}

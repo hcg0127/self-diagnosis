@@ -1,0 +1,49 @@
+{
+  "symptom": "Skin scaling",
+  "questions": [
+    {
+      "question": "When did scaling increase?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is scaling most prominent?",
+      "options": [
+        "Scalp",
+        "Face",
+        "Arms/legs",
+        "Chest/back"
+      ]
+    },
+    {
+      "question": "Are there itching or redness with scaling?",
+      "options": [
+        "Itching",
+        "Erythema",
+        "Dryness",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to remove scales?",
+      "options": [
+        "Scrub",
+        "Moisturizer",
+        "Shampoo change",
+        "None"
+      ]
+    },
+    {
+      "question": "Have any methods been effective?",
+      "options": [
+        "Yes, effective",
+        "Partially effective",
+        "Not effective",
+        "Not tried"
+      ]
+    }
+  ]
+}

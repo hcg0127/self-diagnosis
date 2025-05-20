@@ -1,0 +1,48 @@
+{
+  "symptom": "Back pain",
+  "questions": [
+    {
+      "question": "When did your back pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Lumbar (lower)",
+        "Thoracic (mid)",
+        "Flank",
+        "Entire back"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Sharp",
+        "Dull ache",
+        "Stiffness",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Does movement or posture change the pain?",
+      "options": [
+        "Worsens",
+        "Improves",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (leg numbness, weakness)?",
+      "options": [
+        "Leg numbness",
+        "Weakness",
+        "Sensory abnormality",
+        "None"
+      ]
+    }
+  ]
+}

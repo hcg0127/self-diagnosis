@@ -1,0 +1,49 @@
+{
+  "symptom": "Abdominal pain",
+  "questions": [
+    {
+      "question": "When did your abdominal pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where in the abdomen do you feel the pain?",
+      "options": [
+        "Upper abdomen",
+        "Lower abdomen",
+        "Flank",
+        "Entire abdomen"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Cramping",
+        "Dull pressure",
+        "Sharp",
+        "Constant"
+      ]
+    },
+    {
+      "question": "What makes the pain worse?",
+      "options": [
+        "After eating",
+        "During bowel movement",
+        "With movement",
+        "No specific trigger"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Vomiting",
+        "Diarrhea",
+        "Fever",
+        "None"
+      ]
+    }
+  ]
+}

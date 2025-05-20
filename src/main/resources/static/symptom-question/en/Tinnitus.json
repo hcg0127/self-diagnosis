@@ -1,0 +1,46 @@
+{
+  "symptom": "Tinnitus",
+  "questions": [
+    {
+      "question": "When did you start experiencing tinnitus?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What type of sound do you hear?",
+      "options": [
+        "Ringing",
+        "Buzzing",
+        "Clicking",
+        "Other"
+      ]
+    },
+    {
+      "question": "Is the tinnitus constant or intermittent?",
+      "options": [
+        "Constant",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Is it in one ear or both?",
+      "options": [
+        "Left ear",
+        "Right ear",
+        "Both ears"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Hearing loss",
+        "Ear pain",
+        "Dizziness",
+        "None"
+      ]
+    }
+  ]
+}

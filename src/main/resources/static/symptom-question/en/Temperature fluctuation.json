@@ -1,0 +1,50 @@
+{
+  "symptom": "Temperature fluctuation",
+  "questions": [
+    {
+      "question": "When did your temperature fluctuations begin?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "What is the pattern of change?",
+      "options": [
+        "Up and down",
+        "Gradual increase",
+        "Gradual decrease",
+        "Irregular"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g., fever, chills)?",
+      "options": [
+        "Fever",
+        "Chills",
+        "Cold sweat",
+        "None"
+      ]
+    },
+    {
+      "question": "How did you measure your temperature?",
+      "options": [
+        "Oral",
+        "Rectal",
+        "Armpit",
+        "Ear"
+      ]
+    },
+    {
+      "question": "What have you tried to control your temperature?",
+      "options": [
+        "Fever reducer",
+        "Warm/cold compress",
+        "Hydration",
+        "None"
+      ]
+    }
+  ]
+}

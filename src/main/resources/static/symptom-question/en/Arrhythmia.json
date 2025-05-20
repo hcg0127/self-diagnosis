@@ -1,0 +1,50 @@
+{
+  "symptom": "Arrhythmia",
+  "questions": [
+    {
+      "question": "When did you start noticing irregular heartbeats?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Are the heartbeats fast, slow, or irregular?",
+      "options": [
+        "Fast",
+        "Slow",
+        "Irregular",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Do you have any accompanying symptoms (e.g., dizziness, chest pain)?",
+      "options": [
+        "Dizziness",
+        "Chest pain",
+        "Shortness of breath",
+        "None"
+      ]
+    },
+    {
+      "question": "Does it change depending on your activity (e.g., exercise, rest)?",
+      "options": [
+        "During exercise",
+        "At rest",
+        "During stress",
+        "No change"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Deep breathing",
+        "Sedatives",
+        "Avoiding caffeine",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Irritability",
+  "questions": [
+    {
+      "question": "When did you start feeling irritable?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations do you feel irritated?",
+      "options": [
+        "Traffic",
+        "Interpersonal",
+        "Work",
+        "Small annoyances"
+      ]
+    },
+    {
+      "question": "How severe is the irritability?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "About to explode"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (anxiety, fatigue)?",
+      "options": [
+        "Anxiety",
+        "Fatigue",
+        "Reduced concentration",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to relieve it?",
+      "options": [
+        "Rest",
+        "Breathing exercises",
+        "Exercise",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Skin rash",
+  "questions": [
+    {
+      "question": "When did the rash appear?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the shape of the rash?",
+      "options": [
+        "Macular",
+        "Papular",
+        "Urticarial",
+        "Mixed"
+      ]
+    },
+    {
+      "question": "How is the distribution of the rash?",
+      "options": [
+        "Localized",
+        "Widespread",
+        "Symmetric",
+        "Asymmetric"
+      ]
+    },
+    {
+      "question": "Are itching or pain present?",
+      "options": [
+        "Itching",
+        "Pain",
+        "Burning",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Steroid cream",
+        "Antihistamines",
+        "Cold compress",
+        "None"
+      ]
+    }
+  ]
+}

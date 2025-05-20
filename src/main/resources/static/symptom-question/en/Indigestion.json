@@ -1,0 +1,49 @@
+{
+  "symptom": "Indigestion",
+  "questions": [
+    {
+      "question": "When did your indigestion begin?",
+      "options": [
+        "In the past few days",
+        "About a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "What is your main symptom?",
+      "options": [
+        "Heartburn",
+        "Bloating",
+        "Excessive belching",
+        "Early fullness"
+      ]
+    },
+    {
+      "question": "When does it usually get worse?",
+      "options": [
+        "Immediately after eating",
+        "During a meal",
+        "Before meals",
+        "No specific timing"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Nausea",
+        "Abdominal pain",
+        "Heartburn",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Antacids",
+        "Diet change",
+        "Exercise",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Swelling in hands and feet",
+  "questions": [
+    {
+      "question": "When did the swelling start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago"
+      ]
+    },
+    {
+      "question": "When during the day is the swelling worse?",
+      "options": [
+        "Morning",
+        "Evening",
+        "All day",
+        "Specific situations"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g., pain, itching)?",
+      "options": [
+        "Pain",
+        "Itching",
+        "Warmth",
+        "None"
+      ]
+    },
+    {
+      "question": "Are other areas also swollen (e.g., face, abdomen)?",
+      "options": [
+        "Face",
+        "Abdomen",
+        "Legs",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to reduce the swelling?",
+      "options": [
+        "Elevating legs",
+        "Compression socks",
+        "Controlling fluid intake",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "symptom": "Cold sweat",
+  "questions": [
+    {
+      "question": "When did you start experiencing cold sweats?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Where do you feel the cold sweat most?",
+      "options": [
+        "Forehead",
+        "Back",
+        "Chest",
+        "Whole body"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g., dizziness, palpitations)?",
+      "options": [
+        "Dizziness",
+        "Palpitations",
+        "Nausea",
+        "None"
+      ]
+    },
+    {
+      "question": "Does it occur in specific situations?",
+      "options": [
+        "Fear/anxiety",
+        "During pain",
+        "After exercise",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "What have you tried to manage it?",
+      "options": [
+        "Deep breathing",
+        "Cool drinks",
+        "Cold compress",
+        "None"
+      ]
+    }
+  ]
+}

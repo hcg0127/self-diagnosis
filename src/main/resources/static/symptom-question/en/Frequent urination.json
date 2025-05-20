@@ -1,0 +1,45 @@
+{
+  "symptom": "Frequent urination",
+  "questions": [
+    {
+      "question": "How many times do you urinate per day?",
+      "options": [
+        "5 or fewer",
+        "6–10",
+        "11 or more"
+      ]
+    },
+    {
+      "question": "Is it more frequent at a specific time of day?",
+      "options": [
+        "Daytime",
+        "Nighttime",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "What is the volume of each urination?",
+      "options": [
+        "Small",
+        "Normal",
+        "Large"
+      ]
+    },
+    {
+      "question": "Is there pain or burning?",
+      "options": [
+        "Yes",
+        "Intermittent",
+        "No"
+      ]
+    },
+    {
+      "question": "Is it related to fluid intake?",
+      "options": [
+        "More fluids, more frequency",
+        "No relation",
+        "Less frequent with more fluids"
+      ]
+    }
+  ]
+}

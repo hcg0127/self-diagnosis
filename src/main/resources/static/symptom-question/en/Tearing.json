@@ -1,0 +1,48 @@
+{
+  "symptom": "Tearing",
+  "questions": [
+    {
+      "question": "When did you start tearing frequently?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How much tearing occurs?",
+      "options": [
+        "A little",
+        "Moderate",
+        "Excessive"
+      ]
+    },
+    {
+      "question": "In what situations do you tear up?",
+      "options": [
+        "Wind",
+        "Light exposure",
+        "At rest",
+        "No specific trigger"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Itching",
+        "Redness",
+        "Pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Artificial tears",
+        "Warm compress",
+        "Antihistamines",
+        "None"
+      ]
+    }
+  ]
+}

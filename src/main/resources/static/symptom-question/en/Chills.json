@@ -1,0 +1,49 @@
+{
+  "symptom": "Chills",
+  "questions": [
+    {
+      "question": "When did the chills begin?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "Earlier"
+      ]
+    },
+    {
+      "question": "How long do the chills last?",
+      "options": [
+        "Minutes",
+        "Hours",
+        "More than a day",
+        "Persistent"
+      ]
+    },
+    {
+      "question": "Do you have a fever or other temperature change?",
+      "options": [
+        "Fever",
+        "No change",
+        "Low body temperature",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g., shivering, cold sweat)?",
+      "options": [
+        "Shivering",
+        "Cold sweat",
+        "Headache",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve the chills?",
+      "options": [
+        "Warm drinks",
+        "Warm compress",
+        "Blanket",
+        "None"
+      ]
+    }
+  ]
+}

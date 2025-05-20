@@ -1,0 +1,50 @@
+{
+  "symptom": "Vaginal itching",
+  "questions": [
+    {
+      "question": "When did the itching start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "After period"
+      ]
+    },
+    {
+      "question": "How severe is the itching?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Unbearable"
+      ]
+    },
+    {
+      "question": "When does the itching worsen?",
+      "options": [
+        "Humid conditions",
+        "After exercise",
+        "After sex",
+        "No relation"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (discharge, pain, etc.)?",
+      "options": [
+        "Increased discharge",
+        "Pain",
+        "Irritation",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Artificial vaginal wash",
+        "Antifungal medication",
+        "Moisturizer",
+        "None"
+      ]
+    }
+  ]
+}

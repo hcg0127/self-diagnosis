@@ -1,0 +1,49 @@
+{
+  "symptom": "Shortness of breath",
+  "questions": [
+    {
+      "question": "When did you start feeling short of breath?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations does it worsen?",
+      "options": [
+        "During exercise",
+        "At rest",
+        "When lying down",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "What is the subjective sensation?",
+      "options": [
+        "Breathlessness",
+        "Chest tightness",
+        "Rapid breathing",
+        "Suffocating feeling"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms?",
+      "options": [
+        "Chest pain",
+        "Sweating",
+        "Palpitations",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any breathing exercises or inhalers?",
+      "options": [
+        "Used inhaler",
+        "Changed posture",
+        "Deep breathing",
+        "None"
+      ]
+    }
+  ]
+}

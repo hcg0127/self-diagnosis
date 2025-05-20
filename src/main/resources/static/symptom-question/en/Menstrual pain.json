@@ -1,0 +1,49 @@
+{
+  "symptom": "Menstrual pain",
+  "questions": [
+    {
+      "question": "When did the menstrual cramps start?",
+      "options": [
+        "Since this period started",
+        "A few days ago",
+        "More than a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Lower central abdomen",
+        "Flank",
+        "Lower back",
+        "Entire abdomen"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Cramping",
+        "Dull",
+        "Sharp",
+        "Intermittent/throbbing"
+      ]
+    },
+    {
+      "question": "How severe is the pain?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Very severe"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to relieve the pain?",
+      "options": [
+        "Took painkillers",
+        "Used a hot pack",
+        "Stretching",
+        "Did not try"
+      ]
+    }
+  ]
+}
