@@ -152,6 +152,7 @@ public class SelfDiagnosisService {
         return SelfDiagnosisConverter.createSymptomQuestionResultDTO(symptomName, result.getQuestions());
     }
 
+    // V3: symptom, questionList, answerList를 GPT request에 넘기고 응답값 반환
     public SelfDiagnosisResponse.CreateResultDTO createDepartmentResult(SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
 
         SelfDiagnosisResponse.SymptomQuestionResultDTO symptomQuestion = createSymptomQuestions(new SelfDiagnosisRequest.CreateSymptomQuestionsDTO(request.getLang(), request.getSymptom()));
@@ -165,7 +166,7 @@ public class SelfDiagnosisService {
         }
 
         // Chatbot request와 response 만들기
-        ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(questionList, answerList);
+        ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(request.getSymptom(), questionList, answerList);
         ChatbotResponse chatbotResponse = chatbotService.craeteChatbotResponse(chatbotRequest);
 
         return parseChatMessage(chatbotResponse);
