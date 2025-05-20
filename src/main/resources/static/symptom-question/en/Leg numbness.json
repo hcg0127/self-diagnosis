@@ -1,0 +1,48 @@
+{
+  "symptom": "Leg numbness",
+  "questions": [
+    {
+      "question": "When did your leg numbness start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the numbness located?",
+      "options": [
+        "Thigh",
+        "Calf",
+        "Foot",
+        "Entire leg"
+      ]
+    },
+    {
+      "question": "What is the nature of the numbness?",
+      "options": [
+        "Pins-and-needles",
+        "Stabbing",
+        "Anesthesia",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Does it change when walking or sitting?",
+      "options": [
+        "Worsens",
+        "Improves",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (pain, swelling)?",
+      "options": [
+        "Pain",
+        "Swelling",
+        "Weakness",
+        "None"
+      ]
+    }
+  ]
+}

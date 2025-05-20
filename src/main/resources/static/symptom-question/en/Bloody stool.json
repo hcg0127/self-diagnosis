@@ -1,0 +1,50 @@
+{
+  "symptom": "Bloody stool",
+  "questions": [
+    {
+      "question": "When did you first have bloody stool?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "A few days ago",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "What is the color of the blood?",
+      "options": [
+        "Bright red",
+        "Dark red",
+        "Black",
+        "Mixed"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. abdominal pain, diarrhea)?",
+      "options": [
+        "Abdominal pain",
+        "Diarrhea",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "How often do you have bowel movements?",
+      "options": [
+        "Normal",
+        "Increased",
+        "Decreased",
+        "Irregular"
+      ]
+    },
+    {
+      "question": "Any recent medication or dietary changes?",
+      "options": [
+        "NSAIDs",
+        "Anticoagulants",
+        "Spicy food",
+        "None"
+      ]
+    }
+  ]
+}

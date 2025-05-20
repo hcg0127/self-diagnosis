@@ -1,0 +1,50 @@
+{
+  "symptom": "Gum bleeding",
+  "questions": [
+    {
+      "question": "When did the gum bleeding start?",
+      "options": [
+        "A few days ago",
+        "Over a week ago",
+        "Over a month ago",
+        "Occasionally"
+      ]
+    },
+    {
+      "question": "When does the bleeding occur?",
+      "options": [
+        "While brushing",
+        "While eating",
+        "Spontaneously",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "How severe is the bleeding?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Persistent"
+      ]
+    },
+    {
+      "question": "Any other bleeding (e.g. nose, bruising, urine)?",
+      "options": [
+        "Nosebleeds",
+        "Bruises",
+        "Bloody urine",
+        "None"
+      ]
+    },
+    {
+      "question": "Condition of your gums?",
+      "options": [
+        "Swelling",
+        "Pain",
+        "Redness",
+        "Normal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "symptom": "Sneezing",
+  "questions": [
+    {
+      "question": "When did you start sneezing frequently?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations do you sneeze?",
+      "options": [
+        "Exposure to dust/pollen",
+        "Cold air",
+        "Suddenly",
+        "No pattern"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms with sneezing?",
+      "options": [
+        "Runny nose",
+        "Nasal congestion",
+        "Watery eyes",
+        "None"
+      ]
+    },
+    {
+      "question": "How do you feel after sneezing?",
+      "options": [
+        "Relieved",
+        "Symptoms persist",
+        "Worsened"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve the sneezing?",
+      "options": [
+        "Antihistamines",
+        "Humidifier",
+        "Fluid intake",
+        "None"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "symptom": "Urinary incontinence",
+  "questions": [
+    {
+      "question": "When did you start leaking urine?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "In what situations does leakage occur?",
+      "options": [
+        "When coughing/sneezing",
+        "During exercise/walking",
+        "Suddenly without cause",
+        "Other"
+      ]
+    },
+    {
+      "question": "How much urine leaks?",
+      "options": [
+        "Small amount (damp)",
+        "Moderate",
+        "Large amount (soaking)"
+      ]
+    },
+    {
+      "question": "Have you tried bladder control methods?",
+      "options": [
+        "Exercises (e.g., Kegels)",
+        "Bladder training",
+        "Use of pads",
+        "None"
+      ]
+    },
+    {
+      "question": "Are there other symptoms (e.g., residual urine)?",
+      "options": [
+        "Feeling of residual urine",
+        "Difficulty urinating",
+        "Pain",
+        "None"
+      ]
+    }
+  ]
+}

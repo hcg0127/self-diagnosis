@@ -1,0 +1,50 @@
+{
+  "symptom": "Leg paralysis",
+  "questions": [
+    {
+      "question": "When did your leg become paralyzed?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "Any sensory symptoms (e.g. numbness, tingling)?",
+      "options": [
+        "Tingling",
+        "Numbness",
+        "Pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Which part of the leg is affected?",
+      "options": [
+        "One side",
+        "Both sides",
+        "Thigh",
+        "Lower leg/foot"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. bladder issues, stiffness)?",
+      "options": [
+        "Urination issues",
+        "Stiffness",
+        "Pain",
+        "None"
+      ]
+    },
+    {
+      "question": "How is recovery going?",
+      "options": [
+        "Fully recovered",
+        "Partially recovered",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

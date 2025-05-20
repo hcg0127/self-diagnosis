@@ -1,0 +1,49 @@
+{
+  "symptom": "Hives",
+  "questions": [
+    {
+      "question": "When did the hives appear?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the size of the hives?",
+      "options": [
+        "<1cm",
+        "1–3cm",
+        ">3cm",
+        "Clustered"
+      ]
+    },
+    {
+      "question": "Is there itching or burning?",
+      "options": [
+        "Severe itching",
+        "Mild itching",
+        "Burning",
+        "None"
+      ]
+    },
+    {
+      "question": "How long do the hives last?",
+      "options": [
+        "Minutes",
+        "Hours",
+        "More than a day",
+        "Continuous"
+      ]
+    },
+    {
+      "question": "Is there a trigger?",
+      "options": [
+        "Food",
+        "Medication",
+        "Exercise",
+        "Unknown"
+      ]
+    }
+  ]
+}

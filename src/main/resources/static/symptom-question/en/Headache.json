@@ -1,0 +1,49 @@
+{
+  "symptom": "Headache",
+  "questions": [
+    {
+      "question": "When did your headache start?",
+      "options": [
+        "Today",
+        "1–3 days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where on your head do you feel the pain?",
+      "options": [
+        "Front",
+        "Sides",
+        "Back",
+        "Whole head"
+      ]
+    },
+    {
+      "question": "What is the main character of the headache?",
+      "options": [
+        "Constant",
+        "Intermittent",
+        "Pulsating",
+        "Pressure-like"
+      ]
+    },
+    {
+      "question": "How intense is the pain?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Very severe"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (vomiting, blurred vision, etc.)?",
+      "options": [
+        "Nausea",
+        "Vomiting",
+        "Blurred vision",
+        "None"
+      ]
+    }
+  ]
+}

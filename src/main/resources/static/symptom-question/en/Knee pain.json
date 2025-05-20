@@ -1,0 +1,48 @@
+{
+  "symptom": "Knee pain",
+  "questions": [
+    {
+      "question": "When did your knee pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Anterior",
+        "Medial",
+        "Lateral",
+        "Posterior"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Dull ache",
+        "Tightness",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Does bending or extending the knee change the pain?",
+      "options": [
+        "Worsens",
+        "Improves",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (swelling, crepitus)?",
+      "options": [
+        "Swelling",
+        "Crepitus",
+        "Instability",
+        "None"
+      ]
+    }
+  ]
+}

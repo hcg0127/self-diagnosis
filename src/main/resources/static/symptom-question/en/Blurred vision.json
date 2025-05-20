@@ -1,0 +1,45 @@
+{
+  "symptom": "Blurred vision",
+  "questions": [
+    {
+      "question": "When did you start experiencing blurred vision?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Is it in one eye or both?",
+      "options": [
+        "Left eye",
+        "Right eye",
+        "Both eyes"
+      ]
+    },
+    {
+      "question": "Is the blurriness constant or intermittent?",
+      "options": [
+        "Constant",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Do you have any pain or pressure in the eye?",
+      "options": [
+        "Pain",
+        "Pressure",
+        "None"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Headache",
+        "Vomiting",
+        "Eye redness",
+        "None"
+      ]
+    }
+  ]
+}

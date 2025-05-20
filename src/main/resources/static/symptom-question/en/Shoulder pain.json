@@ -1,0 +1,47 @@
+{
+  "symptom": "Shoulder pain",
+  "questions": [
+    {
+      "question": "When did your shoulder pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Anterior shoulder",
+        "Lateral",
+        "Posterior",
+        "Entire shoulder"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Dull ache",
+        "Pain with movement",
+        "Pain at rest"
+      ]
+    },
+    {
+      "question": "Does raising or rotating your arm cause pain?",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (weakness, stiffness)?",
+      "options": [
+        "Weakness",
+        "Stiffness",
+        "Clicks",
+        "None"
+      ]
+    }
+  ]
+}

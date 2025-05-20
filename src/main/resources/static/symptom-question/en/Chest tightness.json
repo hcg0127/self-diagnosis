@@ -1,0 +1,50 @@
+{
+  "symptom": "Chest tightness",
+  "questions": [
+    {
+      "question": "When did your chest tightness begin?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "How does the tightness feel?",
+      "options": [
+        "Pressure",
+        "Constriction",
+        "Indigestion-like",
+        "Unclear"
+      ]
+    },
+    {
+      "question": "Is it related to activity or stress?",
+      "options": [
+        "During exercise",
+        "Under stress",
+        "At rest",
+        "No relation"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. shortness of breath, palpitations)?",
+      "options": [
+        "Shortness of breath",
+        "Chest pain",
+        "Palpitations",
+        "None"
+      ]
+    },
+    {
+      "question": "What have you tried to relieve the tightness?",
+      "options": [
+        "Deep breathing",
+        "Sedatives",
+        "Antacids",
+        "None"
+      ]
+    }
+  ]
+}

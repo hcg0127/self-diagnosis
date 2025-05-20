@@ -1,0 +1,50 @@
+{
+  "symptom": "Arm paralysis",
+  "questions": [
+    {
+      "question": "When did your arm become paralyzed?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "Is it on one side or both?",
+      "options": [
+        "Left",
+        "Right",
+        "Both",
+        "Partial"
+      ]
+    },
+    {
+      "question": "Any sensory symptoms (e.g. numbness, tingling)?",
+      "options": [
+        "Tingling",
+        "Numbness",
+        "Pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. speech or vision problems)?",
+      "options": [
+        "Speech impairment",
+        "Vision issues",
+        "Seizures",
+        "None"
+      ]
+    },
+    {
+      "question": "How is recovery going?",
+      "options": [
+        "Fully recovered",
+        "Partially recovered",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

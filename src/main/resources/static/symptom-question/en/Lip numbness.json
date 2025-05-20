@@ -1,0 +1,50 @@
+{
+  "symptom": "Lip numbness",
+  "questions": [
+    {
+      "question": "When did the numbness or tingling in your lips begin?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "Is it on one side or both?",
+      "options": [
+        "Left",
+        "Right",
+        "Both",
+        "Partial"
+      ]
+    },
+    {
+      "question": "Any other sensations besides numbness?",
+      "options": [
+        "Tingling",
+        "Pain",
+        "Heat",
+        "None"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. speech or facial weakness)?",
+      "options": [
+        "Speech impairment",
+        "Facial weakness",
+        "Headache",
+        "None"
+      ]
+    },
+    {
+      "question": "How is recovery going?",
+      "options": [
+        "Fully recovered",
+        "Partially recovered",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

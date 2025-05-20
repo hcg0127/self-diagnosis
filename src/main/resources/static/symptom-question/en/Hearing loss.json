@@ -1,0 +1,45 @@
+{
+  "symptom": "Hearing loss",
+  "questions": [
+    {
+      "question": "When did you notice your hearing loss?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Is it in one ear or both?",
+      "options": [
+        "Left ear",
+        "Right ear",
+        "Both ears"
+      ]
+    },
+    {
+      "question": "In what situations is it harder to hear?",
+      "options": [
+        "In quiet places",
+        "In noisy places",
+        "No difference"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Tinnitus",
+        "Ear pain",
+        "Balance issues",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you recently gotten water in your ear?",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Pain during bowel movement",
+  "questions": [
+    {
+      "question": "When did the pain during bowel movements start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where do you feel the pain?",
+      "options": [
+        "Inside the anus",
+        "Outside the anus",
+        "Deep in the rectum",
+        "General area"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Burning",
+        "Dull ache",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Bleeding",
+        "Itching",
+        "Discharge",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Warm sitz bath",
+        "Ointment/suppository",
+        "Increased fiber",
+        "None"
+      ]
+    }
+  ]
+}

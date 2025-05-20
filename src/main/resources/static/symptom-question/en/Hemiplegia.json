@@ -1,0 +1,50 @@
+{
+  "symptom": "Hemiplegia",
+  "questions": [
+    {
+      "question": "When did the paralysis on one side start?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Which areas are affected?",
+      "options": [
+        "Left arm/leg",
+        "Right arm/leg",
+        "One side of face",
+        "Mixed"
+      ]
+    },
+    {
+      "question": "Any abnormal sensations like numbness or tingling?",
+      "options": [
+        "Tingling",
+        "Numbness",
+        "Pain",
+        "None"
+      ]
+    },
+    {
+      "question": "Are there any related symptoms (e.g. speech or vision loss)?",
+      "options": [
+        "Speech impairment",
+        "Vision loss",
+        "Both",
+        "None"
+      ]
+    },
+    {
+      "question": "How much recovery have you made?",
+      "options": [
+        "Fully recovered",
+        "Partially recovered",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

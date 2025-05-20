@@ -1,0 +1,45 @@
+{
+  "symptom": "Arm numbness",
+  "questions": [
+    {
+      "question": "When did your arm numbness start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the numbness located?",
+      "options": [
+        "Shoulder",
+        "Upper arm",
+        "Forearm",
+        "Hand"
+      ]
+    },
+    {
+      "question": "Is the numbness constant or intermittent?",
+      "options": [
+        "Constant",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Is it related to any position change (lying face down, raising arm)?",
+      "options": [
+        "Yes, related",
+        "No"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (pain, weakness)?",
+      "options": [
+        "Pain",
+        "Weakness",
+        "Anesthesia",
+        "None"
+      ]
+    }
+  ]
+}

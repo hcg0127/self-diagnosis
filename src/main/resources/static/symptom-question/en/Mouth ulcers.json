@@ -1,0 +1,49 @@
+{
+  "symptom": "Mouth ulcers",
+  "questions": [
+    {
+      "question": "When did the oral inflammation start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where in the mouth is it located?",
+      "options": [
+        "Tongue",
+        "Gums",
+        "Inner cheeks",
+        "Palate"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Burning",
+        "Intermittent",
+        "Constant"
+      ]
+    },
+    {
+      "question": "Are there ulcers or blisters?",
+      "options": [
+        "Small ulcers",
+        "Large ulcers",
+        "Vesicles",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Gargle",
+        "Ointment",
+        "Pain relievers",
+        "None"
+      ]
+    }
+  ]
+}

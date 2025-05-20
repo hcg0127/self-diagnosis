@@ -8,8 +8,8 @@ public enum BodySystem {
     UROGENITAL("비뇨생식기계"),        // 비뇨생식기계
     MUSCULOSKELETAL("근골격계"),   // 근골격계
     OPHTHALMIC("안과계"),        // 안과계
-    OTOLARYNGOLOGY("이비인후계"),   // 이비인후계
-    DERMATOLOGY("피부과계"),      // 피부과계
+    OTOLARYNGOLOGIC("이비인후계"),   // 이비인후계
+    DERMATOLOGIC("피부과계"),      // 피부과계
     PSYCHIATRIC("정신과"),       // 정신과
     SYSTEMIC("전신 증상");          // 전신 증상
 

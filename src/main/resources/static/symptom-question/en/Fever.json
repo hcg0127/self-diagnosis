@@ -1,0 +1,49 @@
+{
+  "symptom": "Fever",
+  "questions": [
+    {
+      "question": "When did the fever start?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "Earlier"
+      ]
+    },
+    {
+      "question": "What was the highest temperature?",
+      "options": [
+        "37–38℃",
+        "38–39℃",
+        "Over 39℃",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g., chills, sweating)?",
+      "options": [
+        "Chills",
+        "Sweating",
+        "Headache",
+        "None"
+      ]
+    },
+    {
+      "question": "Did your symptoms change after taking fever medicine?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Is there any chance you were recently infected?",
+      "options": [
+        "Cold/flu",
+        "UTI",
+        "Other",
+        "Not sure"
+      ]
+    }
+  ]
+}

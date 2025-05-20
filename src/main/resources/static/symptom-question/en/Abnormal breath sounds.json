@@ -1,0 +1,50 @@
+{
+  "symptom": "Abnormal breath sounds",
+  "questions": [
+    {
+      "question": "When did your breathing sound change?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "What kind of sound do you hear?",
+      "options": [
+        "Wheezing",
+        "Bubbling",
+        "Crackling",
+        "No sound"
+      ]
+    },
+    {
+      "question": "When is the sound most noticeable?",
+      "options": [
+        "Inhalation",
+        "Exhalation",
+        "Both",
+        "Unclear"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. cough, chest pain)?",
+      "options": [
+        "Cough",
+        "Chest pain",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "What have you tried to improve breathing?",
+      "options": [
+        "Bronchodilator",
+        "Rest",
+        "Inhaler",
+        "None"
+      ]
+    }
+  ]
+}

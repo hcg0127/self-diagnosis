@@ -1,0 +1,50 @@
+{
+  "symptom": "Nosebleed",
+  "questions": [
+    {
+      "question": "When did your nosebleeds start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "Which nostril is affected?",
+      "options": [
+        "Left",
+        "Right",
+        "Both",
+        "Unclear"
+      ]
+    },
+    {
+      "question": "How long does the bleeding last?",
+      "options": [
+        "Seconds",
+        "Minutes",
+        "More than 10 minutes",
+        "Persistent"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. runny nose, bruises)?",
+      "options": [
+        "Runny nose",
+        "Bruises",
+        "Headache",
+        "None"
+      ]
+    },
+    {
+      "question": "Did first aid help stop the bleeding?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened",
+        "Did not try"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "symptom": "Weight gain",
+  "questions": [
+    {
+      "question": "When did you start gaining weight?",
+      "options": [
+        "In recent days",
+        "Over a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "Approximately how much have you gained?",
+      "options": [
+        "1–2 kg",
+        "3–5 kg",
+        "Over 5 kg",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (edema, insomnia)?",
+      "options": [
+        "Edema",
+        "Fatigue",
+        "Insomnia",
+        "None"
+      ]
+    },
+    {
+      "question": "Have there been changes in your eating habits?",
+      "options": [
+        "Yes",
+        "No",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to control it?",
+      "options": [
+        "Exercise",
+        "Diet control",
+        "Medication",
+        "None"
+      ]
+    }
+  ]
+}

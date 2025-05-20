@@ -1,0 +1,50 @@
+{
+  "symptom": "Breast pain",
+  "questions": [
+    {
+      "question": "When did the breast pain start?",
+      "options": [
+        "A few days ago",
+        "More than a week ago",
+        "Related to menstrual cycle",
+        "Suddenly"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Dull",
+        "Stabbing",
+        "Burning",
+        "Swelling sensation"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Entire breast",
+        "Around nipple",
+        "Outer side",
+        "Inner side"
+      ]
+    },
+    {
+      "question": "Is the pain related to your menstrual cycle?",
+      "options": [
+        "Worse",
+        "No change",
+        "Better",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Hot pack",
+        "Changed bra",
+        "Painkillers",
+        "None"
+      ]
+    }
+  ]
+}

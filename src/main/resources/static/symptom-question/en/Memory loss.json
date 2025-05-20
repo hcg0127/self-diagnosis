@@ -1,0 +1,49 @@
+{
+  "symptom": "Memory loss",
+  "questions": [
+    {
+      "question": "When did you notice your memory decline?",
+      "options": [
+        "In recent days",
+        "Over a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "Which type of memory is most affected?",
+      "options": [
+        "Short-term memory",
+        "Long-term memory",
+        "Appointments/schedules",
+        "Names/words"
+      ]
+    },
+    {
+      "question": "In what situations do you notice memory issues?",
+      "options": [
+        "During conversations",
+        "At work",
+        "Household tasks",
+        "All situations"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (concentration issues, confusion)?",
+      "options": [
+        "Reduced concentration",
+        "Confusion",
+        "Language issues",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to improve it?",
+      "options": [
+        "Taking notes",
+        "Brain exercises",
+        "Improving sleep",
+        "None"
+      ]
+    }
+  ]
+}

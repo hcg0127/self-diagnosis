@@ -1,0 +1,50 @@
+{
+  "symptom": "Vision loss",
+  "questions": [
+    {
+      "question": "When did you begin to lose your vision?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "How did the vision loss occur?",
+      "options": [
+        "One side",
+        "Both sides",
+        "Center",
+        "Peripheral"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g. headache, nausea)?",
+      "options": [
+        "Headache",
+        "Nausea",
+        "Double vision",
+        "None"
+      ]
+    },
+    {
+      "question": "How long does the vision loss last?",
+      "options": [
+        "Seconds",
+        "Minutes",
+        "Hours",
+        "Constant"
+      ]
+    },
+    {
+      "question": "What is your vision like after recovery?",
+      "options": [
+        "Fully recovered",
+        "Blurry",
+        "Recurring",
+        "Not sure"
+      ]
+    }
+  ]
+}

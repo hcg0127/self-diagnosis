@@ -1,0 +1,49 @@
+{
+  "symptom": "Fatigue",
+  "questions": [
+    {
+      "question": "When did you start feeling fatigued?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "When do you feel the fatigue most?",
+      "options": [
+        "Morning",
+        "After lunch",
+        "Evening",
+        "All day"
+      ]
+    },
+    {
+      "question": "Does rest alleviate the fatigue?",
+      "options": [
+        "Always remains",
+        "Partially relieved",
+        "Fully relieved",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (headache, muscle pain)?",
+      "options": [
+        "Headache",
+        "Muscle pain",
+        "Reduced concentration",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to relieve fatigue?",
+      "options": [
+        "Increasing sleep duration",
+        "Supplements/vitamins",
+        "Exercise",
+        "None"
+      ]
+    }
+  ]
+}

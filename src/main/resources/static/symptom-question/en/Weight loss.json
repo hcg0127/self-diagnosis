@@ -1,0 +1,48 @@
+{
+  "symptom": "Weight loss",
+  "questions": [
+    {
+      "question": "When did you start losing weight?",
+      "options": [
+        "In recent days",
+        "Over a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "Approximately how much have you lost?",
+      "options": [
+        "1–2 kg",
+        "3–5 kg",
+        "Over 5 kg",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (loss of appetite, diarrhea)?",
+      "options": [
+        "Loss of appetite",
+        "Diarrhea",
+        "Insomnia",
+        "None"
+      ]
+    },
+    {
+      "question": "Is the weight loss intentional?",
+      "options": [
+        "Yes",
+        "No",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to manage it?",
+      "options": [
+        "Supplements",
+        "High-calorie diet",
+        "Exercise",
+        "None"
+      ]
+    }
+  ]
+}

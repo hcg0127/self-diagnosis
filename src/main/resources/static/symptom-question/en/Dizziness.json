@@ -1,0 +1,49 @@
+{
+  "symptom": "Dizziness",
+  "questions": [
+    {
+      "question": "When did you start feeling dizzy?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "When does the dizziness usually occur?",
+      "options": [
+        "When standing up",
+        "When turning head",
+        "At rest",
+        "No specific trigger"
+      ]
+    },
+    {
+      "question": "What is the main quality of the dizziness?",
+      "options": [
+        "Spinning sensation",
+        "Unsteady feeling",
+        "Pre‐fainting sensation",
+        "General imbalance"
+      ]
+    },
+    {
+      "question": "How long does each episode of dizziness last?",
+      "options": [
+        "Seconds to tens of seconds",
+        "Minutes",
+        "Hours",
+        "Constant"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (vomiting, tinnitus, etc.)?",
+      "options": [
+        "Nausea/vomiting",
+        "Tinnitus (ear ringing)",
+        "Headache",
+        "None"
+      ]
+    }
+  ]
+}

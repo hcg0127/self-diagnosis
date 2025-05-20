@@ -1,0 +1,48 @@
+{
+  "symptom": "Speech impairment",
+  "questions": [
+    {
+      "question": "When did your speech become impaired?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "What type of speech problem do you have?",
+      "options": [
+        "Stuttering",
+        "Unclear pronunciation",
+        "Word finding difficulty",
+        "Understanding difficulty"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms?",
+      "options": [
+        "Hemiparesis",
+        "Vision loss",
+        "Seizures",
+        "None"
+      ]
+    },
+    {
+      "question": "Is your symptom constant or intermittent?",
+      "options": [
+        "Constant",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "How is your speech after recovery?",
+      "options": [
+        "Fully recovered",
+        "Partially recovered",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "symptom": "Postural imbalance",
+  "questions": [
+    {
+      "question": "When did your posture become imbalanced?",
+      "options": [
+        "Suddenly",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "What type of imbalance are you experiencing?",
+      "options": [
+        "Leaning to one side",
+        "Trunk twisting",
+        "Upper body swaying",
+        "Unrelated"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms like dizziness or nausea?",
+      "options": [
+        "Dizziness",
+        "Nausea",
+        "None"
+      ]
+    },
+    {
+      "question": "Do you also have weakness or stiffness?",
+      "options": [
+        "Weakness",
+        "Stiffness",
+        "Tremor",
+        "None"
+      ]
+    },
+    {
+      "question": "Do you use any assistive devices?",
+      "options": [
+        "Cane",
+        "Walker",
+        "None",
+        "Not sure"
+      ]
+    }
+  ]
+}

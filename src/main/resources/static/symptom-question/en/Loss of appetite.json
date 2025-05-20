@@ -1,0 +1,49 @@
+{
+  "symptom": "Loss of appetite",
+  "questions": [
+    {
+      "question": "When did you start losing your appetite?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "How much do you eat compared to normal?",
+      "options": [
+        "Less than half",
+        "About half",
+        "Almost none",
+        "Slightly less"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (nausea, depression)?",
+      "options": [
+        "Nausea",
+        "Depressed mood",
+        "Fatigue",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you noticed weight changes?",
+      "options": [
+        "Loss",
+        "No change",
+        "Gain",
+        "Unknown"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to improve appetite?",
+      "options": [
+        "Eating small frequent meals",
+        "Supplements",
+        "Changing flavors",
+        "None"
+      ]
+    }
+  ]
+}

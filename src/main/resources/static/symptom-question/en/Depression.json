@@ -1,0 +1,49 @@
+{
+  "symptom": "Depression",
+  "questions": [
+    {
+      "question": "When did you start feeling depressed?",
+      "options": [
+        "In recent days",
+        "Over a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "In what situations does it worsen?",
+      "options": [
+        "Morning",
+        "Evening",
+        "When with others",
+        "When alone"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms (lethargy, weight changes)?",
+      "options": [
+        "Lethargy",
+        "Weight loss",
+        "Sleep changes",
+        "None"
+      ]
+    },
+    {
+      "question": "Does it affect your daily life?",
+      "options": [
+        "Significantly",
+        "Somewhat",
+        "Barely",
+        "Not at all"
+      ]
+    },
+    {
+      "question": "Have you tried any methods to improve it?",
+      "options": [
+        "Counseling/therapy",
+        "Exercise",
+        "Hobbies",
+        "None"
+      ]
+    }
+  ]
+}

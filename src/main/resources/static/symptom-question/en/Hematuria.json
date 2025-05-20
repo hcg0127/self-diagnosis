@@ -1,0 +1,47 @@
+{
+  "symptom": "Hematuria",
+  "questions": [
+    {
+      "question": "When did you first notice blood in your urine?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "Earlier"
+      ]
+    },
+    {
+      "question": "Does the blood appear at the start, middle, end, or throughout the urine stream?",
+      "options": [
+        "Start",
+        "Midstream",
+        "End",
+        "Throughout"
+      ]
+    },
+    {
+      "question": "Is it visible to the naked eye or only under a microscope?",
+      "options": [
+        "Clearly visible",
+        "Faint",
+        "Microscopic only"
+      ]
+    },
+    {
+      "question": "Are there pain or other symptoms?",
+      "options": [
+        "Pain present",
+        "Frequent urination",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you had a similar experience before?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot recall"
+      ]
+    }
+  ]
+}

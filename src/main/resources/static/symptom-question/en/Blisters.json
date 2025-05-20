@@ -1,0 +1,49 @@
+{
+  "symptom": "Blisters",
+  "questions": [
+    {
+      "question": "When did the blisters appear?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the size and number of blisters?",
+      "options": [
+        "Small and multiple",
+        "Large and few",
+        "Mixed",
+        "Clustered"
+      ]
+    },
+    {
+      "question": "Are the blisters painful or itchy?",
+      "options": [
+        "Painful",
+        "Itchy",
+        "Urticarial",
+        "None"
+      ]
+    },
+    {
+      "question": "Do the blisters burst or leak fluid?",
+      "options": [
+        "Yes, clear fluid",
+        "Yes, blood-tinged",
+        "Not burst yet",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any protective measures?",
+      "options": [
+        "Disinfection and dressing",
+        "Antibiotic ointment",
+        "Pain relievers",
+        "None"
+      ]
+    }
+  ]
+}

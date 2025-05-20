@@ -1,0 +1,48 @@
+{
+  "symptom": "Muscle pain",
+  "questions": [
+    {
+      "question": "When did your muscle pain start?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "Earlier"
+      ]
+    },
+    {
+      "question": "Which muscle area is painful?",
+      "options": [
+        "Neck/shoulder",
+        "Back/lower back",
+        "Arm",
+        "Leg"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Aching",
+        "Shooting",
+        "Cramping",
+        "Dull ache"
+      ]
+    },
+    {
+      "question": "Does rest or exercise change the pain?",
+      "options": [
+        "Worse at rest",
+        "Worse with exercise",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (heat, swelling)?",
+      "options": [
+        "Heat",
+        "Swelling",
+        "Weakness",
+        "None"
+      ]
+    }
+  ]
+}

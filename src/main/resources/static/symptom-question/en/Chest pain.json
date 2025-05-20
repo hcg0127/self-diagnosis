@@ -1,0 +1,49 @@
+{
+  "symptom": "Chest pain",
+  "questions": [
+    {
+      "question": "When did your chest pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where in the chest is the pain located?",
+      "options": [
+        "Center",
+        "Left side",
+        "Right side",
+        "Toward back"
+      ]
+    },
+    {
+      "question": "What is the quality of the pain?",
+      "options": [
+        "Pressure",
+        "Stabbing",
+        "Burning",
+        "Dull ache"
+      ]
+    },
+    {
+      "question": "Does breathing or activity affect the pain?",
+      "options": [
+        "Worse with breathing",
+        "Worse with exertion",
+        "Better at rest",
+        "No change"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Shortness of breath",
+        "Sweating",
+        "Palpitations",
+        "None"
+      ]
+    }
+  ]
+}

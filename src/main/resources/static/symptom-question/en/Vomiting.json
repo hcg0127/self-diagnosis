@@ -1,0 +1,47 @@
+{
+  "symptom": "Vomiting",
+  "questions": [
+    {
+      "question": "When did the vomiting start?",
+      "options": [
+        "Today",
+        "Yesterday",
+        "Earlier"
+      ]
+    },
+    {
+      "question": "How many times have you vomited today?",
+      "options": [
+        "Once",
+        "2–3 times",
+        "4 or more times"
+      ]
+    },
+    {
+      "question": "What was the content of the vomit?",
+      "options": [
+        "Food",
+        "Liquids",
+        "Green bile",
+        "Blood or coffee-ground material"
+      ]
+    },
+    {
+      "question": "Did you have other symptoms before vomiting (abdominal pain, dizziness, etc.)?",
+      "options": [
+        "Severe abdominal pain",
+        "Dizziness",
+        "Diarrhea",
+        "None"
+      ]
+    },
+    {
+      "question": "Did your symptoms improve after vomiting?",
+      "options": [
+        "Improved",
+        "No change",
+        "Worsened"
+      ]
+    }
+  ]
+}

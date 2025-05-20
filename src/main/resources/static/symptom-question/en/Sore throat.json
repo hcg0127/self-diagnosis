@@ -1,0 +1,48 @@
+{
+  "symptom": "Sore throat",
+  "questions": [
+    {
+      "question": "When did your sore throat start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Scratchy",
+        "Burning",
+        "Intermittent",
+        "Constant"
+      ]
+    },
+    {
+      "question": "Does swallowing worsen the pain?",
+      "options": [
+        "Yes, significantly",
+        "Very mild",
+        "No difference"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Fever",
+        "Cough",
+        "Runny nose",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Gargle",
+        "Pain relievers",
+        "Honey water",
+        "None"
+      ]
+    }
+  ]
+}

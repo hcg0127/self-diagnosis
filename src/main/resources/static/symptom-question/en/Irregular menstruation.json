@@ -1,0 +1,50 @@
+{
+  "symptom": "Irregular menstruation",
+  "questions": [
+    {
+      "question": "How has your menstrual cycle changed recently?",
+      "options": [
+        "Delayed by more than a week",
+        "Started more than a week early",
+        "Irregular",
+        "Skipped period"
+      ]
+    },
+    {
+      "question": "How has the duration of your period changed?",
+      "options": [
+        "Longer",
+        "Shorter",
+        "Irregular",
+        "No change"
+      ]
+    },
+    {
+      "question": "What is your menstrual flow like?",
+      "options": [
+        "Increased",
+        "Decreased",
+        "Normal",
+        "Varies"
+      ]
+    },
+    {
+      "question": "Do you have other symptoms (pain, fatigue, etc.)?",
+      "options": [
+        "Severe cramps",
+        "Heavy bleeding",
+        "Nausea",
+        "None"
+      ]
+    },
+    {
+      "question": "Are you using hormone therapy or birth control pills?",
+      "options": [
+        "Currently using",
+        "Used in the past",
+        "Not using",
+        "Not sure"
+      ]
+    }
+  ]
+}

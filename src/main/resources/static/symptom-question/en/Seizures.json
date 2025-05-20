@@ -1,0 +1,50 @@
+{
+  "symptom": "Seizures",
+  "questions": [
+    {
+      "question": "When did the seizures start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Which part of the body is affected by the seizures?",
+      "options": [
+        "Whole body",
+        "One arm/leg",
+        "Face",
+        "Torso"
+      ]
+    },
+    {
+      "question": "What type of seizure is it?",
+      "options": [
+        "Tonic-clonic",
+        "General stiffness",
+        "Minor tremor",
+        "Partial"
+      ]
+    },
+    {
+      "question": "Was there any loss of consciousness?",
+      "options": [
+        "Yes, complete",
+        "No",
+        "Partial",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Are there any post-seizure symptoms (e.g. fatigue, headache)?",
+      "options": [
+        "Fatigue",
+        "Headache",
+        "Muscle pain",
+        "None"
+      ]
+    }
+  ]
+}

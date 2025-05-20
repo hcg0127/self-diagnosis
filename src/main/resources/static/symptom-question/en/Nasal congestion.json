@@ -1,0 +1,49 @@
+{
+  "symptom": "Nasal congestion",
+  "questions": [
+    {
+      "question": "When did you start feeling nasal congestion?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Which side is congested?",
+      "options": [
+        "One side",
+        "Both sides",
+        "Alternating",
+        "Entire nose"
+      ]
+    },
+    {
+      "question": "How severe is the congestion?",
+      "options": [
+        "Mild",
+        "Moderate",
+        "Severe",
+        "Feels like breathlessness"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms?",
+      "options": [
+        "Runny nose",
+        "Headache",
+        "Reduced smell",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Saline rinse",
+        "Nasal spray",
+        "Humidifier",
+        "None"
+      ]
+    }
+  ]
+}

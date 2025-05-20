@@ -1,0 +1,50 @@
+{
+  "symptom": "Pain while breathing",
+  "questions": [
+    {
+      "question": "When did the pain during breathing start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week",
+        "Occasional"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Behind sternum",
+        "Side",
+        "Back",
+        "Entire chest"
+      ]
+    },
+    {
+      "question": "Is it worse with deep breathing?",
+      "options": [
+        "Yes",
+        "No",
+        "No difference",
+        "Sometimes"
+      ]
+    },
+    {
+      "question": "Any other symptoms (e.g. cough, shortness of breath)?",
+      "options": [
+        "Cough",
+        "Shortness of breath",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "What have you tried to relieve the pain?",
+      "options": [
+        "Rest",
+        "Painkillers",
+        "Warm compress",
+        "None"
+      ]
+    }
+  ]
+}

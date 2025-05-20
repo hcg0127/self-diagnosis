@@ -1,0 +1,50 @@
+{
+  "symptom": "Easy bruising",
+  "questions": [
+    {
+      "question": "When did you start bruising easily?",
+      "options": [
+        "Past few days",
+        "More than a week",
+        "Over a month",
+        "Irregular"
+      ]
+    },
+    {
+      "question": "Where do the bruises mainly appear?",
+      "options": [
+        "Arms/legs",
+        "Torso",
+        "Face",
+        "Whole body"
+      ]
+    },
+    {
+      "question": "What is the size and color of the bruises?",
+      "options": [
+        "Small and dark",
+        "Large and light",
+        "Mixed",
+        "No change"
+      ]
+    },
+    {
+      "question": "Do bruises occur without any obvious injury?",
+      "options": [
+        "Yes",
+        "No",
+        "Don't remember",
+        "Partially"
+      ]
+    },
+    {
+      "question": "Any accompanying symptoms (e.g. bleeding, fatigue)?",
+      "options": [
+        "Frequent bleeding",
+        "Fatigue",
+        "None",
+        "Other"
+      ]
+    }
+  ]
+}

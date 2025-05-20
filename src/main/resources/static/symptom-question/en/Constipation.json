@@ -1,0 +1,48 @@
+{
+  "symptom": "Constipation",
+  "questions": [
+    {
+      "question": "How many bowel movements did you have this past week?",
+      "options": [
+        "One or fewer",
+        "2–3",
+        "4 or more"
+      ]
+    },
+    {
+      "question": "What was the stool like?",
+      "options": [
+        "Hard",
+        "Thin and long",
+        "Smooth",
+        "With mucus"
+      ]
+    },
+    {
+      "question": "Any discomfort along with constipation?",
+      "options": [
+        "Abdominal pain",
+        "Bloating",
+        "Gas",
+        "None"
+      ]
+    },
+    {
+      "question": "When did the constipation start?",
+      "options": [
+        "A few days ago",
+        "Over a week ago",
+        "Over a month ago"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Increased fiber",
+        "More fluids",
+        "Laxatives",
+        "None"
+      ]
+    }
+  ]
+}

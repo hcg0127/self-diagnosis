@@ -1,0 +1,50 @@
+{
+  "symptom": "Increased vaginal discharge",
+  "questions": [
+    {
+      "question": "When did the discharge increase?",
+      "options": [
+        "A few days ago",
+        "More than a week ago",
+        "After period",
+        "Suddenly"
+      ]
+    },
+    {
+      "question": "What is the color and smell of the discharge?",
+      "options": [
+        "Clear/odorless",
+        "White/no odor",
+        "Yellow/odor present",
+        "Green/foul odor"
+      ]
+    },
+    {
+      "question": "How much discharge is there?",
+      "options": [
+        "Slight",
+        "Moderate",
+        "Heavy",
+        "Soaks underwear"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (itching, pain, etc.)?",
+      "options": [
+        "Itching",
+        "Pain",
+        "Swelling",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried any relief methods?",
+      "options": [
+        "Vaginal douching",
+        "Antibiotics/antifungals",
+        "Changed underwear",
+        "None"
+      ]
+    }
+  ]
+}

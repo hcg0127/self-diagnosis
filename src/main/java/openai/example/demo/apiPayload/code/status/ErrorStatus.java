@@ -21,7 +21,10 @@ public enum ErrorStatus implements BaseErrorCode {
 
     //symptom
     SYMPTOM_NOT_FOUND(HttpStatus.NOT_FOUND, "SYMPTOM4001", "해당하는 증상을 찾을 수 없습니다."),
-    SYMPTOM_SIZE_NOT_MATCH(HttpStatus.BAD_REQUEST, "SYMPTOM4002", "질문과 답변의 개수가 일치하지 않습니다.");
+    SYMPTOM_SIZE_NOT_MATCH(HttpStatus.BAD_REQUEST, "SYMPTOM4002", "질문과 답변의 개수가 일치하지 않습니다."),
+
+    //language
+    LANG_NOT_SUPPORTED(HttpStatus.BAD_REQUEST, "LANG4001", "지원하지 않는 언어입니다.");
 
     private final HttpStatus httpStatus;
     private final String code;

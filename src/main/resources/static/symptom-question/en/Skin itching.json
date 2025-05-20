@@ -1,0 +1,49 @@
+{
+  "symptom": "Skin itching",
+  "questions": [
+    {
+      "question": "When did you start experiencing skin itching?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the itching located?",
+      "options": [
+        "All over body",
+        "Localized (one area)",
+        "Mostly arms/legs",
+        "Face/scalp"
+      ]
+    },
+    {
+      "question": "What is the pattern of itching?",
+      "options": [
+        "Intermittent",
+        "Constant",
+        "Worse when scratched",
+        "No change when scratched"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (redness, swelling, etc.)?",
+      "options": [
+        "Redness",
+        "Swelling",
+        "Blisters",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Moisturizer",
+        "Antihistamines",
+        "Cold compress",
+        "None"
+      ]
+    }
+  ]
+}

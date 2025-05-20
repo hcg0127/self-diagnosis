@@ -1,0 +1,47 @@
+{
+  "symptom": "Ear pain",
+  "questions": [
+    {
+      "question": "When did your ear pain start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "Where is the pain located?",
+      "options": [
+        "Outer ear canal",
+        "Inner ear",
+        "Earlobe",
+        "Whole ear"
+      ]
+    },
+    {
+      "question": "What is the nature of the pain?",
+      "options": [
+        "Stabbing",
+        "Burning",
+        "Dull ache",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms?",
+      "options": [
+        "Hearing loss",
+        "Tinnitus",
+        "Fever",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you been swimming or played in water recently?",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    }
+  ]
+}

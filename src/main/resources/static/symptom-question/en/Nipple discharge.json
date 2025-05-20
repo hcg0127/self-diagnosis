@@ -1,0 +1,50 @@
+{
+  "symptom": "Nipple discharge",
+  "questions": [
+    {
+      "question": "When did the discharge start?",
+      "options": [
+        "A few days ago",
+        "More than a week ago",
+        "Around menstruation",
+        "Suddenly"
+      ]
+    },
+    {
+      "question": "What is the color and consistency of the discharge?",
+      "options": [
+        "Clear/odorless",
+        "White/sticky",
+        "Yellow/smelly",
+        "Bloody"
+      ]
+    },
+    {
+      "question": "Is it on one side or both?",
+      "options": [
+        "Left only",
+        "Right only",
+        "Both",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Is the discharge continuous or intermittent?",
+      "options": [
+        "Continuous",
+        "Intermittent",
+        "Only when pressed",
+        "Not sure"
+      ]
+    },
+    {
+      "question": "Are there any accompanying symptoms (pain, swelling, etc.)?",
+      "options": [
+        "Pain",
+        "Swelling",
+        "Heat sensation",
+        "None"
+      ]
+    }
+  ]
+}

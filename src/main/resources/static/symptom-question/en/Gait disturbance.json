@@ -1,0 +1,49 @@
+{
+  "symptom": "Gait disturbance",
+  "questions": [
+    {
+      "question": "When did your walking become abnormal?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "More than a week ago",
+        "Intermittent"
+      ]
+    },
+    {
+      "question": "What kind of walking issue are you experiencing?",
+      "options": [
+        "Staggering",
+        "Short steps",
+        "Freezing",
+        "Dragging"
+      ]
+    },
+    {
+      "question": "Any balance issues or dizziness?",
+      "options": [
+        "Balance issues",
+        "Dizziness",
+        "None"
+      ]
+    },
+    {
+      "question": "Any weakness or stiffness in your legs?",
+      "options": [
+        "Weakness",
+        "Stiffness",
+        "Tremor",
+        "None"
+      ]
+    },
+    {
+      "question": "Do you use any assistive devices?",
+      "options": [
+        "Cane",
+        "Walker",
+        "None",
+        "Not sure"
+      ]
+    }
+  ]
+}

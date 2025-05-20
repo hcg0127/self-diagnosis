@@ -1,0 +1,48 @@
+{
+  "symptom": "Runny nose",
+  "questions": [
+    {
+      "question": "When did your runny nose start?",
+      "options": [
+        "Today",
+        "A few days ago",
+        "Over a week ago"
+      ]
+    },
+    {
+      "question": "What is the color of the discharge?",
+      "options": [
+        "Clear",
+        "White",
+        "Yellow",
+        "Green"
+      ]
+    },
+    {
+      "question": "How much discharge is there?",
+      "options": [
+        "Small",
+        "Moderate",
+        "Large"
+      ]
+    },
+    {
+      "question": "Are there accompanying symptoms?",
+      "options": [
+        "Congestion",
+        "Sneezing",
+        "Sore throat",
+        "None"
+      ]
+    },
+    {
+      "question": "Have you tried anything to relieve it?",
+      "options": [
+        "Using tissue",
+        "Saline rinse",
+        "Antihistamines",
+        "None"
+      ]
+    }
+  ]
+}
