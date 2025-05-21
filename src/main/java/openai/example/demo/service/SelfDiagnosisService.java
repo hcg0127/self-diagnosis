@@ -205,4 +205,25 @@ public class SelfDiagnosisService {
 
         return SelfDiagnosisConverter.getTop5SymptomAndDetailSymptomResultDTO(symptoms, detailSymptoms);
     }
+
+    // V4: DetailSymptom과 관련된 모든 Symptom 반환
+    public SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO getSymptomsWithDetailSymptom(String lang, Long detailSymptomId) {
+
+        List<Symptom> symptomList = symptomRepository.findSymptomsWithDetailSymptom(detailSymptomId);
+        List<SelfDiagnosisResponse.Symptom> symptoms;
+
+        if (lang.equals("en")) {
+            symptoms = symptomList.stream()
+                    .map(symptom -> new SelfDiagnosisResponse.Symptom(symptom.getId(), symptom.getEnName(), symptom.getEnDescription()))
+                    .collect(Collectors.toList());
+        } else if (lang.equals("ko")) {
+            symptoms = symptomList.stream()
+                    .map(symptom -> new SelfDiagnosisResponse.Symptom(symptom.getId(), symptom.getKoName(), symptom.getKoDescription()))
+                    .collect(Collectors.toList());
+        } else {
+            throw new LanguageHandler(ErrorStatus.LANG_NOT_SUPPORTED);
+        }
+
+        return SelfDiagnosisConverter.getSymptomsWithDetailSymptomResultDTO(symptoms);
+    }
 }
