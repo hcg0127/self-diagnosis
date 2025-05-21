@@ -24,4 +24,11 @@ public class SelfDiagnosisConverter {
                 .questions(questions)
                 .build();
     }
+
+    public static SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO getTop5SymptomAndDetailSymptomResultDTO(List<SelfDiagnosisResponse.Symptom> symptoms, List<SelfDiagnosisResponse.DetailSymptom> detailSymptoms) {
+        return SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO.builder()
+                .top5SymptomList(symptoms)
+                .top5DetailSymptomList(detailSymptoms)
+                .build();
+    }
 }

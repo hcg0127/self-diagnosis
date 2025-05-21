@@ -8,6 +8,9 @@ import openai.example.demo.apiPayload.exception.handler.JsonParserHandler;
 import openai.example.demo.apiPayload.exception.handler.LanguageHandler;
 import openai.example.demo.apiPayload.exception.handler.SymptomHandler;
 import openai.example.demo.converter.SelfDiagnosisConverter;
+import openai.example.demo.domain.DetailSymptom;
+import openai.example.demo.domain.Symptom;
+import openai.example.demo.repository.detailSymptomRepository.DetailSymptomRepository;
 import openai.example.demo.repository.symptomRepository.SymptomRepository;
 import openai.example.demo.web.dto.chatbot.ChatbotRequest;
 import openai.example.demo.web.dto.chatbot.ChatbotResponse;
@@ -35,6 +38,8 @@ public class SelfDiagnosisService {
     private final ChatbotService chatbotService;
 
     private final SymptomRepository symptomRepository;
+
+    private final DetailSymptomRepository detailSymptomRepository;
 
     // V2: Symptom을 Entity 대신 Set<String>으로 저장 -> O(1)로 찾기
 //    private static final Set<String> SYMPTOM_LIST = Set.of("두통", "어지러움", "메스꺼움", "구토", "복통", "가슴 통증", "소화 불량", "변비", "설사", "배변 시 통증",
@@ -170,5 +175,33 @@ public class SelfDiagnosisService {
         ChatbotResponse chatbotResponse = chatbotService.craeteChatbotResponse(chatbotRequest);
 
         return parseChatMessage(chatbotResponse);
+    }
+
+    public SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO getTop5SymptomAndDetailSymptom(String lang) {
+
+        List<Symptom> symptomList = symptomRepository.findTop5ByOrderBySearchCountDesc();
+        List<DetailSymptom> detailSymptomList = detailSymptomRepository.findTop5ByOrderBySearchCountDesc();
+        List<SelfDiagnosisResponse.Symptom> symptoms;
+        List<SelfDiagnosisResponse.DetailSymptom> detailSymptoms;
+
+        if (lang.equals("en")) {
+            symptoms = symptomList.stream()
+                    .map(symptom -> new SelfDiagnosisResponse.Symptom(symptom.getId(), symptom.getEnName(), symptom.getEnDescription()))
+                    .collect(Collectors.toList());
+            detailSymptoms = detailSymptomList.stream()
+                    .map(detailSymptom -> new SelfDiagnosisResponse.DetailSymptom(detailSymptom.getId(), detailSymptom.getEnDetailDescription()))
+                    .collect(Collectors.toList());
+        } else if (lang.equals("ko")) {
+            symptoms = symptomList.stream()
+                    .map(symptom -> new SelfDiagnosisResponse.Symptom(symptom.getId(), symptom.getKoName(), symptom.getKoDescription()))
+                    .collect(Collectors.toList());
+            detailSymptoms = detailSymptomList.stream()
+                    .map(detailSymptom -> new SelfDiagnosisResponse.DetailSymptom(detailSymptom.getId(), detailSymptom.getKoDetailDescription()))
+                    .collect(Collectors.toList());
+        } else {
+            throw new LanguageHandler(ErrorStatus.LANG_NOT_SUPPORTED);
+        }
+
+        return SelfDiagnosisConverter.getTop5SymptomAndDetailSymptomResultDTO(symptoms, detailSymptoms);
     }
 }
