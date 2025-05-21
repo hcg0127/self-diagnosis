@@ -89,4 +89,13 @@ public class SelfDiagnosisResponse {
         Long detailSymptomId;
         String detailSymptomDescription;
     }
+
+    // V4
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class getSymptomsWithDetailSymptomResultDTO {
+        List<Symptom> SymptomList;
+    }
 }

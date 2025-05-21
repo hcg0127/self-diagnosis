@@ -48,9 +48,15 @@ public class SelfDiagnosisController {
         return ApiResponse.onSuccess(result);
     }
 
-    @PostMapping("/v4/top5")
+    @GetMapping("/v4/top5")
     public ApiResponse<SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO> getTop5Symptoms(@RequestParam("lang") String lang) {
         SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO result = selfDiagnosisService.getTop5SymptomAndDetailSymptom(lang);
+        return ApiResponse.onSuccess(result);
+    }
+
+    @PostMapping("/v4/symptoms")
+    public ApiResponse<SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO> getSymptoms(@RequestParam("lang") String lang, @RequestParam("detailSymptomId") Long detailSymptomId) {
+        SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO result = selfDiagnosisService.getSymptomsWithDetailSymptom(lang, detailSymptomId);
         return ApiResponse.onSuccess(result);
     }
 }
