@@ -182,6 +182,7 @@ public class SelfDiagnosisService {
 
         List<Symptom> symptomList = symptomRepository.findTop5ByOrderBySearchCountDesc();
         List<DetailSymptom> detailSymptomList = detailSymptomRepository.findTop5ByOrderBySearchCountDesc();
+
         List<SelfDiagnosisResponse.Symptom> symptoms;
         List<SelfDiagnosisResponse.DetailSymptom> detailSymptoms;
 
@@ -210,6 +211,10 @@ public class SelfDiagnosisService {
     public SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO getSymptomsWithDetailSymptom(String lang, Long detailSymptomId) {
 
         List<Symptom> symptomList = symptomRepository.findSymptomsWithDetailSymptom(detailSymptomId);
+
+        if (symptomList.isEmpty())
+            throw new SymptomHandler(ErrorStatus.SYMPTOM_NOT_FOUND);
+
         List<SelfDiagnosisResponse.Symptom> symptoms;
 
         if (lang.equals("en")) {
