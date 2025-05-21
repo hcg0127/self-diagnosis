@@ -177,6 +177,7 @@ public class SelfDiagnosisService {
         return parseChatMessage(chatbotResponse);
     }
 
+    // V4: 자주 찾는 symptom 및 detailSymptom 상위 5개 반환
     public SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO getTop5SymptomAndDetailSymptom(String lang) {
 
         List<Symptom> symptomList = symptomRepository.findTop5ByOrderBySearchCountDesc();

@@ -48,7 +48,7 @@ public class SelfDiagnosisController {
         return ApiResponse.onSuccess(result);
     }
 
-    @PostMapping("/v4/top5-symptoms")
+    @PostMapping("/v4/top5")
     public ApiResponse<SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO> getTop5Symptoms(@RequestParam("lang") String lang) {
         SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO result = selfDiagnosisService.getTop5SymptomAndDetailSymptom(lang);
         return ApiResponse.onSuccess(result);
