@@ -136,18 +136,14 @@ public class SelfDiagnosisService {
     public SelfDiagnosisResponse.SymptomQuestionResultDTO createSymptomQuestions(SelfDiagnosisRequest.CreateSymptomQuestionsDTO request) throws IOException {
 
         String lang = request.getLang();
-        String symptomName = request.getSymptomName();
+        Symptom symptom = symptomRepository.findById(request.getSymptomId())
+                .orElseThrow(() -> new SymptomHandler(ErrorStatus.SYMPTOM_NOT_FOUND));
 
-        if (lang.equals("en")) {
-            if (!symptomRepository.existsSymptomByEnName(symptomName))
-                throw new SymptomHandler(ErrorStatus.SYMPTOM_NOT_FOUND);
-        } else if (lang.equals("ko")) {
-            if (!symptomRepository.existsSymptomByKoName(symptomName))
-                throw new SymptomHandler(ErrorStatus.SYMPTOM_NOT_FOUND);
-        } else {
+        if (!lang.equals("en") && !lang.equals("ko")) {
             throw new LanguageHandler(ErrorStatus.LANG_NOT_SUPPORTED);
         }
 
+        String symptomName = lang.equals("en") ? symptom.getEnName() : symptom.getKoName();
         String path = "src/main/resources/static/symptom-question/" + lang + "/" + symptomName + ".json";
 
         ObjectMapper mapper = new ObjectMapper();
@@ -160,7 +156,8 @@ public class SelfDiagnosisService {
     // V3: symptom, questionList, answerList를 GPT request에 넘기고 응답값 반환
     public SelfDiagnosisResponse.CreateResultDTO createDepartmentResult(SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
 
-        SelfDiagnosisResponse.SymptomQuestionResultDTO symptomQuestion = createSymptomQuestions(new SelfDiagnosisRequest.CreateSymptomQuestionsDTO(request.getLang(), request.getSymptom()));
+        // 증상에 맞는 질문 가져오기
+        SelfDiagnosisResponse.SymptomQuestionResultDTO symptomQuestion = createSymptomQuestions(new SelfDiagnosisRequest.CreateSymptomQuestionsDTO(request.getLang(), request.getSymptomId()));
 
         List<String> questionList = symptomQuestion.getQuestions().stream()
                 .map(SelfDiagnosisResponse.Question::getQuestion).collect(Collectors.toList());
@@ -170,8 +167,11 @@ public class SelfDiagnosisService {
             throw new SymptomHandler(ErrorStatus.SYMPTOM_SIZE_NOT_MATCH);
         }
 
+        Symptom symptom = symptomRepository.findById(request.getSymptomId()).get();
+        String symptomName = request.getLang().equals("en") ? symptom.getEnName() : symptom.getKoName();
+
         // Chatbot request와 response 만들기
-        ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(request.getSymptom(), questionList, answerList);
+        ChatbotRequest chatbotRequest = chatbotService.createChatbotRequest(symptomName, questionList, answerList);
         ChatbotResponse chatbotResponse = chatbotService.craeteChatbotResponse(chatbotRequest);
 
         return parseChatMessage(chatbotResponse);

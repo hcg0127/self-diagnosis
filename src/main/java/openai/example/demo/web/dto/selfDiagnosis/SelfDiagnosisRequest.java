@@ -37,7 +37,7 @@ public class SelfDiagnosisRequest {
         private String lang;
 
         @NotNull
-        private String symptom;
+        private Long symptomId;
 
         @NotNull
         private List<List<String>> answers;
@@ -54,6 +54,6 @@ public class SelfDiagnosisRequest {
         private String lang;
 
         @NotNull
-        private String symptomName;
+        private Long symptomId;
     }
 }
