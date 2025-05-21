@@ -7,6 +7,7 @@ import java.util.List;
 
 public class SelfDiagnosisResponse {
 
+    // V2
     @Getter
     @Builder
     @AllArgsConstructor
@@ -18,6 +19,7 @@ public class SelfDiagnosisResponse {
         LocalDateTime createdAt;
     }
 
+    // V2
     @Getter
     @Builder
     @AllArgsConstructor
@@ -27,6 +29,7 @@ public class SelfDiagnosisResponse {
         String ko;
     }
 
+    // V2
     @Getter
     @Builder
     @AllArgsConstructor
@@ -36,6 +39,7 @@ public class SelfDiagnosisResponse {
         String ko;
     }
 
+    // V3
     @Getter
     @Builder
     @AllArgsConstructor
@@ -45,6 +49,7 @@ public class SelfDiagnosisResponse {
         List<Question> questions;
     }
 
+    // V3
     @Getter
     @Builder
     @AllArgsConstructor
@@ -52,5 +57,36 @@ public class SelfDiagnosisResponse {
     public static class Question {
         String question;
         List<String> options;
+    }
+
+    // V4
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Top5SymptomAndDetailSymptomResultDTO {
+        List<Symptom> top5SymptomList;
+        List<DetailSymptom> top5DetailSymptomList;
+    }
+
+    // V4
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Symptom {
+        Long symptomId;
+        String symptomName;
+        String symptomDescription;
+    }
+
+    // V4
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class DetailSymptom {
+        Long detailSymptomId;
+        String detailSymptomDescription;
     }
 }

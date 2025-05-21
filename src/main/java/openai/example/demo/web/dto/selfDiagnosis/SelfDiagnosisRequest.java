@@ -7,6 +7,7 @@ import java.util.List;
 
 public class SelfDiagnosisRequest {
 
+    // V2
     @Builder
     @Getter
     @AllArgsConstructor
@@ -24,6 +25,7 @@ public class SelfDiagnosisRequest {
         private String additionalNote;
     }
 
+    // V2
     @Builder
     @Getter
     @AllArgsConstructor
