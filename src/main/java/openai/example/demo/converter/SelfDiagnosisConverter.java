@@ -41,4 +41,19 @@ public class SelfDiagnosisConverter {
                 .SymptomList(symptoms)
                 .build();
     }
+
+    // V4
+    public static SelfDiagnosisResponse.DetailSymptom getDetailSymptom(String description, Long id) {
+        return SelfDiagnosisResponse.DetailSymptom.builder()
+                .detailSymptomDescription(description)
+                .detailSymptomId(id)
+                .build();
+    }
+
+    // V4
+    public static SelfDiagnosisResponse.getDetailSymptomsResultDTO getDetailSymptomsResultDTO(List<SelfDiagnosisResponse.DetailSymptom> detailSymptoms) {
+        return SelfDiagnosisResponse.getDetailSymptomsResultDTO.builder()
+                .DetailSymptomList(detailSymptoms)
+                .build();
+    }
 }

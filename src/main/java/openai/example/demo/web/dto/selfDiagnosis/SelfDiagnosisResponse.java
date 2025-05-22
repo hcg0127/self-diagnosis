@@ -98,4 +98,13 @@ public class SelfDiagnosisResponse {
     public static class getSymptomsWithDetailSymptomResultDTO {
         List<Symptom> SymptomList;
     }
+
+    // V4
+    @Builder
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class getDetailSymptomsResultDTO {
+        List<DetailSymptom> DetailSymptomList;
+    }
 }

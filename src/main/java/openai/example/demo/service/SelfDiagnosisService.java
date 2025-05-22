@@ -20,6 +20,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.data.redis.core.Cursor;
+import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ScanOptions;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +31,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,6 +46,8 @@ public class SelfDiagnosisService {
     private final SymptomRepository symptomRepository;
 
     private final DetailSymptomRepository detailSymptomRepository;
+
+    private final RedisTemplate<String, Object> redisTemplate;
 
     // V2: Symptom을 Entity 대신 Set<String>으로 저장 -> O(1)로 찾기
 //    private static final Set<String> SYMPTOM_LIST = Set.of("두통", "어지러움", "메스꺼움", "구토", "복통", "가슴 통증", "소화 불량", "변비", "설사", "배변 시 통증",
@@ -230,5 +238,44 @@ public class SelfDiagnosisService {
         }
 
         return SelfDiagnosisConverter.getSymptomsWithDetailSymptomResultDTO(symptoms);
+    }
+
+    // V4: DetailSymptom 검색어 자동 완성
+    public SelfDiagnosisResponse.getDetailSymptomsResultDTO searchDetailSymptoms(String lang, String word) {
+
+        HashOperations<String,String,Long> hashOperations = redisTemplate.opsForHash();
+
+        if (redisTemplate.getExpire("DS") < 0) {
+            List<DetailSymptom> detailSymptomList = detailSymptomRepository.findAll();
+            Map<String,Long> stringLongMap;
+            if (lang.equals("en")) {
+                stringLongMap = detailSymptomList.stream()
+                        .collect(Collectors.toMap(DetailSymptom::getEnDetailDescription,DetailSymptom::getId));
+            } else if (lang.equals("ko")) {
+                stringLongMap = detailSymptomList.stream()
+                        .collect(Collectors.toMap(DetailSymptom::getKoDetailDescription,DetailSymptom::getId));
+            } else {
+                throw new LanguageHandler(ErrorStatus.LANG_NOT_SUPPORTED);
+            }
+            hashOperations.putAll("DS",stringLongMap);
+            redisTemplate.expire("DS",1L, TimeUnit.MINUTES);
+        }
+
+        ScanOptions scanOptions = ScanOptions.scanOptions()
+                .match("*" + word + "*")
+                .build();
+
+        Cursor<Map.Entry<String,Long>> cursor = hashOperations
+                .scan("DS",scanOptions);
+
+        List<SelfDiagnosisResponse.DetailSymptom> detailSymptoms = new ArrayList<>();
+
+        while (cursor.hasNext()) {
+            Map.Entry<String, Long> entry = cursor.next();
+            detailSymptoms.add(SelfDiagnosisConverter
+                    .getDetailSymptom(entry.getKey(), ((Number) entry.getValue()).longValue()));
+        }
+
+        return SelfDiagnosisConverter.getDetailSymptomsResultDTO(detailSymptoms);
     }
 }
