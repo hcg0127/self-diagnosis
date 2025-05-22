@@ -36,27 +36,33 @@ public class SelfDiagnosisController {
 //        return ApiResponse.onSuccess(result);
 //    }
 
-    @PostMapping("/v3/symptom-questions")
+    @GetMapping("/v3/symptom-questions")
     public ApiResponse<SelfDiagnosisResponse.SymptomQuestionResultDTO> getSymptomQuestions(@RequestBody @Valid SelfDiagnosisRequest.CreateSymptomQuestionsDTO request) throws IOException {
         SelfDiagnosisResponse.SymptomQuestionResultDTO result = selfDiagnosisService.createSymptomQuestions(request);
         return ApiResponse.onSuccess(result);
     }
 
-    @PostMapping("/v3/chat")
+    @GetMapping("/v3/chat")
     public ApiResponse<SelfDiagnosisResponse.CreateResultDTO> getSelfDiagnosisResult(@RequestBody @Valid SelfDiagnosisRequest.CreateDepartmentDTO request) throws IOException, ParseException {
         SelfDiagnosisResponse.CreateResultDTO result = selfDiagnosisService.createDepartmentResult(request);
         return ApiResponse.onSuccess(result);
     }
 
     @GetMapping("/v4/top5")
-    public ApiResponse<SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO> getTop5Symptoms(@RequestParam("lang") String lang) {
+    public ApiResponse<SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO> getTop5SymptomAndDetailSymptom(@RequestParam("lang") String lang) {
         SelfDiagnosisResponse.Top5SymptomAndDetailSymptomResultDTO result = selfDiagnosisService.getTop5SymptomAndDetailSymptom(lang);
         return ApiResponse.onSuccess(result);
     }
 
-    @PostMapping("/v4/symptoms")
+    @GetMapping("/v4/symptoms")
     public ApiResponse<SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO> getSymptoms(@RequestParam("lang") String lang, @RequestParam("detailSymptomId") Long detailSymptomId) {
         SelfDiagnosisResponse.getSymptomsWithDetailSymptomResultDTO result = selfDiagnosisService.getSymptomsWithDetailSymptom(lang, detailSymptomId);
+        return ApiResponse.onSuccess(result);
+    }
+
+    @GetMapping("/v4/detail-symptoms/search")
+    public ApiResponse<SelfDiagnosisResponse.getDetailSymptomsResultDTO> getDetailSymptoms(@RequestParam("lang") String lang, @RequestParam("word") String word) {
+        SelfDiagnosisResponse.getDetailSymptomsResultDTO result = selfDiagnosisService.searchDetailSymptoms(lang, word);
         return ApiResponse.onSuccess(result);
     }
 }
