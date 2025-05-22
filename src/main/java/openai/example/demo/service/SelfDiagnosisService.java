@@ -262,7 +262,7 @@ public class SelfDiagnosisService {
         }
 
         ScanOptions scanOptions = ScanOptions.scanOptions()
-                .match(word + "*")
+                .match("*" + word + "*")
                 .build();
 
         Cursor<Map.Entry<String,Long>> cursor = hashOperations
